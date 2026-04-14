@@ -816,32 +816,47 @@ code {
 
 /* ===== Blog Post ===== */
 
+.post-hero {
+    background: var(--dark-surface);
+    color: var(--white);
+    padding: 100px 24px 60px;
+    text-align: center;
+}
+
+.post-hero .blog-date {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.48);
+    margin-bottom: 16px;
+}
+
+.post-hero h1 {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.10;
+    max-width: 680px;
+    margin: 0 auto 20px;
+}
+
+.post-hero .post-subtitle {
+    font-size: 19px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 540px;
+    margin: 0 auto;
+}
+
 .blog-post {
     max-width: 700px;
     margin: 0 auto;
-    padding: 80px 24px 0;
-}
-
-.post-header { margin-bottom: 40px; text-align: center }
-
-.post-header .blog-date {
-    font-size: 14px;
-    color: var(--text-tertiary);
-    margin-bottom: 12px;
-}
-
-.post-header h1 {
-    font-family: var(--font-display);
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.10;
+    padding: 60px 24px 0;
 }
 
 .post-body p {
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.76;
     letter-spacing: -0.374px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .post-body h2 {
@@ -849,12 +864,65 @@ code {
     font-size: 28px;
     font-weight: 600;
     line-height: 1.14;
-    margin-top: 48px;
-    margin-bottom: 16px;
+    margin-top: 56px;
+    margin-bottom: 20px;
 }
 
 .post-body a { color: var(--link-light) }
 .post-body a:hover { text-decoration: underline }
+
+.post-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.post-body hr {
+    border: none;
+    width: 60px;
+    height: 1px;
+    background: var(--text-tertiary);
+    margin: 48px auto;
+}
+
+.post-body blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 32px 0;
+    padding: 16px 24px;
+    background: var(--gray-bg);
+    border-radius: 0 8px 8px 0;
+}
+
+.post-body blockquote p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: var(--text-primary);
+}
+
+.post-body ul {
+    margin: 20px 0 28px;
+    padding-left: 24px;
+}
+
+.post-body li {
+    font-size: 17px;
+    line-height: 1.76;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.post-body li::marker {
+    color: var(--accent);
+}
+
+.post-signature {
+    text-align: right;
+    color: var(--text-tertiary);
+    font-size: 15px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
 
 .post-nav { padding: 32px 0 }
 
@@ -1268,7 +1336,13 @@ code {
 
     .container-prose p { color: rgba(255, 255, 255, 0.8); }
     .post-body p { color: rgba(255, 255, 255, 0.8); }
+    .post-body strong { color: #f5f5f7; }
     .post-body a { color: var(--link-dark); }
+    .post-body blockquote { background: #2d2d2f; }
+    .post-body blockquote p { color: #f5f5f7; }
+    .post-body li { color: rgba(255, 255, 255, 0.8); }
+    .post-body hr { background: rgba(255, 255, 255, 0.2); }
+    .post-signature { color: rgba(255, 255, 255, 0.48); border-top-color: rgba(255, 255, 255, 0.08); }
 
     .step-row { border-bottom-color: rgba(255, 255, 255, 0.1); }
     .step-text p { color: rgba(255, 255, 255, 0.6); }
@@ -1288,6 +1362,10 @@ code {
     .headline-section { font-size: 28px }
     .headline-tile { font-size: 21px }
     .subtitle { font-size: 17px }
+
+    .post-hero { padding: 80px 20px 48px }
+    .post-hero h1 { font-size: 32px }
+    .post-hero .post-subtitle { font-size: 17px }
 
     .features-grid { grid-template-columns: 1fr }
     .values-grid { grid-template-columns: 1fr }
