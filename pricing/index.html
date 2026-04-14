@@ -154,7 +154,7 @@
     if (toggle) toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open') });
 
     function copyShareLink() {
-        var text = '免费、原生、注重隐私的 macOS & iOS 工具。VoiceJar 语音输入法 + BabyJournal 轻量日记。https://tangzhihong.com';
+        var text = '不会写代码，用 AI 做的工具。VoiceJar 语音输入法 + BabyJournal 日记。完全免费。https://tangzhihong.com';
         navigator.clipboard.writeText(text).then(function() {
             var t = document.getElementById('shareToast');
             t.textContent = '已复制到剪贴板';
