@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceJar — 免费 macOS 语音输入法 | 按住说话，松开即输入</title>
-    <meta name="description" content="VoiceJar 是一款完全免费的 macOS 原生语音输入法。按住快捷键说话，松开即输入文字。支持全局使用、实时流式识别、AI 润色。数据本地处理。">
-    <meta name="keywords" content="macOS语音输入法,mac语音转文字,语音输入,AI润色,免费输入法,macOS工具">
+    <title>VoiceJar — 免费 macOS 语音输入法 | 语音输入 + AI 翻译</title>
+    <meta name="description" content="VoiceJar 是一款完全免费的 macOS 原生语音输入法。按住说话松开即输入，选中文字一键翻译。支持中英日韩五种语言、多 AI 引擎、全局快捷键。数据本地处理。">
+    <meta name="keywords" content="macOS语音输入法,mac语音转文字,语音输入,AI翻译,AI润色,免费输入法,macOS工具,中英翻译">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://tangzhihong.com/voicejar/">
-    <meta property="og:title" content="VoiceJar — 免费 macOS 语音输入法">
-    <meta property="og:description" content="完全免费的 macOS 原生语音输入法。按住说话，松开即输入。全局可用，实时识别，AI 润色。">
+    <meta property="og:title" content="VoiceJar — 语音输入 + AI 翻译">
+    <meta property="og:description" content="macOS 原生语音输入法。按住说话松开即输入，选中文字一键翻译。中英日韩多语言，完全免费。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tangzhihong.com/voicejar/">
     <meta property="og:image" content="https://tangzhihong.com/og-image.svg">
     <meta property="og:site_name" content="唐志宏">
     <meta property="og:locale" content="zh_CN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VoiceJar — 免费 macOS 语音输入法">
-    <meta name="twitter:description" content="按住说话，松开即输入。macOS 全局语音输入，AI 润色，中文优化。完全免费。">
+    <meta name="twitter:title" content="VoiceJar — 语音输入 + AI 翻译">
+    <meta name="twitter:description" content="按住说话松开即输入，选中一键翻译。macOS 全局语音输入，中英日韩多语言，完全免费。">
     <meta name="twitter:image" content="https://tangzhihong.com/og-image.svg">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
+    <a href="#main" class="skip-nav">跳到主要内容</a>
+
     <div class="nav"><div class="nav-inner">
         <a href="../" class="nav-logo">唐志宏</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <div class="nav-links">
             <a href="../voicejar/" class="active">VoiceJar</a>
             <a href="../babyjournal/">BabyJournal</a>
@@ -33,12 +38,24 @@
         </div>
     </div></div>
 
+    <div class="product-nav"><div class="product-nav-inner">
+        <span class="product-nav-name">VoiceJar</span>
+        <div class="product-nav-links">
+            <a href="#features">功能</a>
+            <a href="#translate">翻译</a>
+            <a href="#howto">上手</a>
+            <a href="#changelog">更新日志</a>
+        </div>
+    </div></div>
+
+    <main id="main">
+
     <!-- Hero — Dark -->
     <div class="section section-dark">
         <div class="section-inner">
             <div class="hero">
                 <h1 class="headline-hero">VoiceJar</h1>
-                <p class="subtitle">按住说话，松开输入。</p>
+                <p class="subtitle">按住说话，松开输入。选中文字，一键翻译。</p>
                 <div class="cta-group">
                     <a href="./VoiceJar.dmg" class="btn-primary">
                         <svg viewBox="0 0 16 16" fill="none" width="15" height="15"><path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -62,62 +79,81 @@
         </div>
     </div>
 
-    <!-- Realtime — Light -->
-    <div class="section section-light">
-        <div class="section-inner">
-            <h2 class="headline-section">边说边出字。</h2>
-            <p class="subtitle">流式语音转文字，基于 Apple Speech 框架。<br>延迟极低，边说边看到文字出现。</p>
-        </div>
-    </div>
-
-    <!-- Global — Dark -->
-    <div class="section section-dark">
-        <div class="section-inner">
-            <h2 class="headline-section">任何 App，随时说。</h2>
-            <p class="subtitle">全局快捷键，任何应用、任何输入框都能用。<br>不抢焦点，不打断工作流。</p>
-        </div>
-    </div>
-
-    <!-- AI Polish — Light -->
-    <div class="section section-light">
-        <div class="section-inner">
-            <h2 class="headline-section">AI 帮你整理。</h2>
-            <p class="subtitle">自动修正同音字、补标点、去口头禅。<br>支持 Ollama、Claude、DeepSeek、Gemini。</p>
-        </div>
-    </div>
-
-    <!-- Privacy — Dark -->
-    <div class="section section-dark">
-        <div class="section-inner">
-            <h2 class="headline-section">你的声音不会被上传。</h2>
-            <p class="subtitle">语音识别基于 Apple 本地框架，不经过第三方服务器。<br>AI 润色使用你自己的 API Key，费用完全透明。</p>
-        </div>
-    </div>
-
-    <!-- Features — White -->
+    <!-- Realtime — White (功能说明) -->
     <div class="section section-white">
+        <div class="section-inner fade-in">
+            <span class="section-icon">&#128483;</span>
+            <h2 class="headline-section">边说边出字。</h2>
+            <p class="subtitle">流式语音转文字，基于 Apple Speech 框架。<br>延迟极低，边说边看到文字出现。支持中文、英语、日语、韩语、繁体中文。</p>
+        </div>
+    </div>
+
+    <!-- Translation — Dark (重点新功能) -->
+    <div id="translate" class="section section-dark">
+        <div class="section-inner fade-in">
+            <span class="section-icon">&#127760;</span>
+            <h2 class="headline-section">选中即翻译。</h2>
+            <p class="subtitle">选中任意文字，按下 ⌥T，翻译结果即刻出现。<br>中英自动识别，也支持日语目标语言。翻译引擎独立配置。</p>
+        </div>
+    </div>
+
+    <!-- Global — White (功能说明) -->
+    <div class="section section-white">
+        <div class="section-inner fade-in">
+            <span class="section-icon">&#9000;</span>
+            <h2 class="headline-section">任何 App，随时说。</h2>
+            <p class="subtitle">全局快捷键，任何应用、任何输入框都能用。<br>不抢焦点，不打断工作流。快捷键完全自定义。</p>
+        </div>
+    </div>
+
+    <!-- AI Polish — White (功能说明) -->
+    <div class="section section-white">
+        <div class="section-inner fade-in">
+            <span class="section-icon">&#10024;</span>
+            <h2 class="headline-section">AI 帮你整理。</h2>
+            <p class="subtitle">自动修正同音字、补标点、去口头禅、调整语序。<br>支持 Ollama 本地模型、Claude、DeepSeek、Gemini、OpenAI 兼容接口。</p>
+        </div>
+    </div>
+
+    <!-- Privacy — Dark (价值主张) -->
+    <div class="section section-dark">
+        <div class="section-inner fade-in">
+            <span class="section-icon">&#128274;</span>
+            <h2 class="headline-section">你的声音不会被上传。</h2>
+            <p class="subtitle">语音识别基于 Apple 本地框架，不经过第三方服务器。<br>AI 润色和翻译使用你自己的 API Key，费用完全透明。</p>
+            <a href="../privacy.html" class="link-more" style="margin-top:20px">了解隐私政策 &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Features — Light (参考型网格) -->
+    <div id="features" class="section section-light">
         <div class="section-inner">
             <h2 class="headline-section">功能一览。</h2>
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">&#128483;</div>
                     <div class="feature-title">实时识别</div>
-                    <div class="feature-desc">流式语音转文字，边说边出字。</div>
+                    <div class="feature-desc">流式语音转文字，边说边出字，五种语言。</div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">&#127760;</div>
                     <div class="feature-title">全局可用</div>
-                    <div class="feature-desc">任何 App，按住 Fn 即可语音输入。</div>
+                    <div class="feature-desc">任何 App，按住快捷键即可语音输入。</div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">&#9889;</div>
-                    <div class="feature-title">双模式</div>
-                    <div class="feature-desc">即时上屏 / AI 润色上屏，双击 Fn 切换。</div>
+                    <div class="feature-icon">&#127468;&#127473;</div>
+                    <div class="feature-title">一键翻译</div>
+                    <div class="feature-desc">选中文字按 ⌥T，中英自动识别，即刻翻译。</div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">&#10024;</div>
                     <div class="feature-title">AI 润色</div>
-                    <div class="feature-desc">多引擎支持，修正同音字、补标点。</div>
+                    <div class="feature-desc">修正同音字、补标点、去口头禅、调语序。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#9889;</div>
+                    <div class="feature-title">双模式</div>
+                    <div class="feature-desc">即时上屏 / 润色上屏，双击 Fn 切换。</div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">&#128172;</div>
@@ -125,46 +161,56 @@
                     <div class="feature-desc">光标附近实时显示，毛玻璃设计。</div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">&#127464;&#127475;</div>
-                    <div class="feature-title">中文优化</div>
-                    <div class="feature-desc">默认中文识别，中英混输自动处理。</div>
+                    <div class="feature-icon">&#129302;</div>
+                    <div class="feature-title">多引擎</div>
+                    <div class="feature-desc">Ollama · Claude · DeepSeek · Gemini · OpenAI 兼容。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128214;</div>
+                    <div class="feature-title">历史记录</div>
+                    <div class="feature-desc">最近 50 条语音记录，随时回看和重新输入。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128221;</div>
+                    <div class="feature-title">日记联动</div>
+                    <div class="feature-desc">语音直接发送到 BabyJournal，用说的写日记。</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- How it works — Light -->
-    <div class="section section-light">
+    <!-- How it works — White (教程) -->
+    <div id="howto" class="section section-white">
         <div class="section-inner">
-            <h2 class="headline-section">三步上手。</h2>
+            <h2 class="headline-section">上手即用。</h2>
             <div class="steps-list">
                 <div class="step-row">
                     <div class="step-num"></div>
                     <div class="step-text">
-                        <h3>按住 Fn 说话</h3>
+                        <h3>按住快捷键说话</h3>
                         <p>浮窗自动出现在光标附近，实时显示识别文字。</p>
                     </div>
                 </div>
                 <div class="step-row">
                     <div class="step-num"></div>
                     <div class="step-text">
-                        <h3>松开 Fn</h3>
-                        <p>文字立即输入到光标位置，零延迟上屏。</p>
+                        <h3>松开，文字上屏</h3>
+                        <p>文字立即输入到光标位置。双击 Fn 切换即时/润色模式。</p>
                     </div>
                 </div>
                 <div class="step-row">
                     <div class="step-num"></div>
                     <div class="step-text">
-                        <h3>双击 Fn 切换模式</h3>
-                        <p>红点 = 即时模式，紫点 = 润色模式。</p>
+                        <h3>选中文字，⌥T 翻译</h3>
+                        <p>中英自动识别方向。翻译结果直接显示在浮窗中。</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- What's New — White -->
-    <div class="section section-white">
+    <!-- What's New — Light (参考型) -->
+    <div id="changelog" class="section section-light">
         <div class="section-inner">
             <h2 class="headline-section">最新动态。</h2>
             <div class="changelog">
@@ -201,6 +247,8 @@
         </div>
     </div>
 
+    </main>
+
     <!-- Footer -->
     <div class="footer">
         <div class="footer-inner">
@@ -210,15 +258,32 @@
                 <a href="../babyjournal/">BabyJournal</a>
             </div>
             <div class="footer-col">
-                <h4>Links</h4>
+                <h4>Resources</h4>
                 <a href="../blog/">Blog</a>
                 <a href="../pricing/">Pricing</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
                 <a href="../privacy.html">Privacy</a>
                 <a href="mailto:hi@tangzhihong.com">Contact</a>
             </div>
         </div>
-        <p class="footer-copy">&copy; 2026 唐志宏</p>
+        <div class="footer-legal">
+            <span>Copyright &copy; 2026 唐志宏. All rights reserved.</span>
+            <div class="footer-legal-links">
+                <a href="../privacy.html">隐私政策</a>
+            </div>
+        </div>
     </div>
 
+    <script>
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target) } })
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open') });
+    </script>
 </body>
 </html>

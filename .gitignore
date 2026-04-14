@@ -3,3 +3,5 @@ apple/
 design.md
 DESIGN.md
 marketing/
+build-blog.py
+blog/posts/

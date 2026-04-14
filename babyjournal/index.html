@@ -7,6 +7,8 @@
     <meta name="description" content="BabyJournal 是一款完全免费的轻量日记应用。SwiftUI 原生开发，支持 macOS 和 iOS。数据本地存储，支持语音写日记和多种 AI 辅助写作引擎。">
     <meta name="keywords" content="日记app,日记软件,免费日记,mac日记,iOS日记,本地存储日记,AI写作,语音日记,隐私日记,Day One替代">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://tangzhihong.com/babyjournal/">
     <meta property="og:title" content="BabyJournal — 免费轻量日记 App">
     <meta property="og:description" content="完全免费的轻量日记应用。SwiftUI 原生开发，数据本地存储，支持多种 AI 辅助写作引擎。">
@@ -22,9 +24,11 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <a href="#main" class="skip-nav">跳到主要内容</a>
 
     <div class="nav"><div class="nav-inner">
         <a href="../" class="nav-logo">唐志宏</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <div class="nav-links">
             <a href="../voicejar/">VoiceJar</a>
             <a href="../babyjournal/" class="active">BabyJournal</a>
@@ -33,11 +37,22 @@
         </div>
     </div></div>
 
+    <div class="product-nav"><div class="product-nav-inner">
+        <span class="product-nav-name">BabyJournal</span>
+        <div class="product-nav-links">
+            <a href="#features">功能</a>
+            <a href="#ai">AI</a>
+            <a href="#changelog">更新日志</a>
+        </div>
+    </div></div>
+
+    <main id="main">
+
     <!-- Hero — Dark -->
     <div class="section section-dark">
         <div class="section-inner">
             <div class="hero">
-                <img src="icon-web.png" alt="BabyJournal" class="app-icon-hero">
+                <img src="icon-web.png" alt="BabyJournal" class="app-icon-hero" loading="lazy">
                 <h1 class="headline-hero">BabyJournal</h1>
                 <p class="subtitle">打开就写，关掉就走。</p>
                 <div class="cta-group">
@@ -50,13 +65,13 @@
                 <p class="meta">v1.0.0 · macOS 14.0+ · iOS 17.0+ · 完全免费</p>
             </div>
             <div class="screenshot-showcase">
-                <img src="screenshot-mac.jpg" alt="BabyJournal macOS 编辑界面">
+                <img src="screenshot-mac.jpg" alt="BabyJournal macOS 编辑界面" loading="lazy">
             </div>
         </div>
     </div>
 
-    <!-- Privacy — Light -->
-    <div class="section section-light">
+    <!-- Privacy — White -->
+    <div class="section section-white">
         <div class="section-inner">
             <h2 class="headline-section">你的日记，只属于你。</h2>
             <p class="subtitle">所有数据本地存储。不依赖云服务，不运营服务器。<br>我们无法接触你的任何数据。</p>
@@ -64,33 +79,33 @@
     </div>
 
     <!-- AI — Dark -->
-    <div class="section section-dark">
+    <div id="ai" class="section section-dark">
         <div class="section-inner">
             <h2 class="headline-section">AI 帮你回忆。</h2>
             <p class="subtitle">写完日记，AI Reflect 给你温暖的回应。<br>像一个懂你的朋友，陪你重新看见那些值得记住的瞬间。</p>
             <div class="screenshot-grid">
                 <div style="text-align:center">
-                    <img src="screenshot-ios.jpg" alt="BabyJournal iOS AI Reflect">
+                    <img src="screenshot-ios.jpg" alt="BabyJournal iOS AI Reflect" loading="lazy">
                     <p class="screenshot-caption">AI Reflect 智能回应</p>
                 </div>
                 <div style="text-align:center">
-                    <img src="screenshot-ai.jpg" alt="BabyJournal AI 引擎配置">
+                    <img src="screenshot-ai.jpg" alt="BabyJournal AI 引擎配置" loading="lazy">
                     <p class="screenshot-caption">7 种 AI 引擎 + 本地模型</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Native — Light -->
-    <div class="section section-light">
+    <!-- Native — White -->
+    <div class="section section-white">
         <div class="section-inner">
             <h2 class="headline-section">原生应用，不是浏览器套壳。</h2>
             <p class="subtitle">SwiftUI 构建，支持 macOS 和 iOS。<br>启动快、内存低、系统集成深。</p>
         </div>
     </div>
 
-    <!-- Features — White -->
-    <div class="section section-white">
+    <!-- Features — Light -->
+    <div id="features" class="section section-light">
         <div class="section-inner">
             <h2 class="headline-section">功能一览。</h2>
             <div class="features-grid">
@@ -128,8 +143,8 @@
         </div>
     </div>
 
-    <!-- Getting Started — Light -->
-    <div class="section section-light">
+    <!-- Getting Started — White -->
+    <div class="section section-white">
         <div class="section-inner">
             <h2 class="headline-section">三步开始。</h2>
             <ol class="gs">
@@ -140,8 +155,8 @@
         </div>
     </div>
 
-    <!-- What's New — White -->
-    <div class="section section-white">
+    <!-- Changelog — Light -->
+    <div id="changelog" class="section section-light">
         <div class="section-inner">
             <h2 class="headline-section">最新动态。</h2>
             <div class="changelog">
@@ -170,24 +185,29 @@
         </div>
     </div>
 
+    </main>
+
     <!-- Footer -->
     <div class="footer">
         <div class="footer-inner">
-            <div class="footer-col">
-                <h4>Products</h4>
-                <a href="../voicejar/">VoiceJar</a>
-                <a href="../babyjournal/">BabyJournal</a>
-            </div>
-            <div class="footer-col">
-                <h4>Links</h4>
-                <a href="../blog/">Blog</a>
-                <a href="../pricing/">Pricing</a>
-                <a href="../privacy.html">Privacy</a>
-                <a href="mailto:hi@tangzhihong.com">Contact</a>
-            </div>
+            <div class="footer-col"><h4>Products</h4><a href="../voicejar/">VoiceJar</a><a href="../babyjournal/">BabyJournal</a></div>
+            <div class="footer-col"><h4>Resources</h4><a href="../blog/">Blog</a><a href="../pricing/">Pricing</a></div>
+            <div class="footer-col"><h4>About</h4><a href="../privacy.html">Privacy</a><a href="mailto:hi@tangzhihong.com">Contact</a></div>
         </div>
-        <p class="footer-copy">&copy; 2026 唐志宏</p>
+        <div class="footer-legal">
+            <span>Copyright &copy; 2026 唐志宏. All rights reserved.</span>
+            <div class="footer-legal-links"><a href="../privacy.html">隐私政策</a></div>
+        </div>
     </div>
 
+    <script>
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target) } })
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open') });
+    </script>
 </body>
 </html>
