@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你好，世界 — 为什么我要做免费工具 | 唐志宏</title>
-    <meta name="description" content="我是唐志宏，一个独立开发者。这是我的第一篇博客，聊聊为什么我选择把自己用的工具免费分享出来。">
+    <title>40 岁，不会写代码，我做了两个 App | 唐志宏</title>
+    <meta name="description" content="我是唐志宏，40 岁，保险公司内勤，非计算机专业。用 AI 做出了两个上架 App Store 的产品。这是我的故事。">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://tangzhihong.com/blog/hello-world.html">
-    <meta property="og:title" content="你好，世界 — 为什么我要做免费工具">
-    <meta property="og:description" content="我是唐志宏，一个独立开发者。这是我的第一篇博客，聊聊为什么我选择把自己用的工具免费分享出来。">
+    <meta property="og:title" content="40 岁，不会写代码，我做了两个 App">
+    <meta property="og:description" content="保险公司内勤，非计算机专业。用 AI 做出了两个上架 App Store 的产品。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://tangzhihong.com/blog/hello-world.html">
     <meta property="og:image" content="https://tangzhihong.com/og-image.svg">
@@ -36,37 +36,61 @@
     <article class="blog-post">
         <header class="post-header">
             <p class="blog-date">2026-04-12</p>
-            <h1>你好，世界 — 为什么我要做免费工具</h1>
+            <h1>40 岁，不会写代码，我做了两个 App</h1>
         </header>
 
         <div class="post-body">
-            <p>你好，我是唐志宏，一个独立开发者。</p>
+            <p>你好，我是唐志宏。40 岁，在保险公司做内勤，不是计算机专业出身。</p>
 
-<p>我做了两款 macOS 原生工具：<a href="../voicejar/">VoiceJar</a> 是一款语音输入法，按住说话松开即输入；<a href="../babyjournal/">BabyJournal</a> 是一款轻量日记应用。它们都完全免费。</p>
+<p>2023 年我试过学 Python，没坚持下来。但今天，我做的 App 已经上架了 App Store。</p>
 
-<h2>为什么免费</h2>
+<p>这篇文章聊聊这件事是怎么发生的。</p>
 
-<p>这些工具一开始是给自己用的。VoiceJar 是因为我在 Mac 上找不到一个好用的语音输入工具——要么是浏览器套壳，要么收费离谱，要么数据不知道传到了哪里。BabyJournal 则是因为我想要一个打开就能写、关掉就走的日记本，不需要注册账号，不需要云同步。</p>
+<h2>一个坏掉的 App</h2>
 
-<p>做出来之后觉得，既然自己用了，为什么不分享出来呢？好工具不该被价格挡住。</p>
+<p>我有记日志的习惯。不是发朋友圈那种 — 我不太喜欢把自己的生活摊在别人面前。但有些事情值得记下来，给自己看就好。</p>
 
-<h2>为什么原生</h2>
+<p>之前一直用一个开源的日志 App，用了挺久。后来它不再维护了，开始频繁卡顿，有时候甚至打不开。我的日志都在里面。</p>
 
-<p>市面上大量工具是用 Electron 做的——本质上是一个浏览器在跑一个网页。它们能用，但启动慢、内存占用高、和系统的集成也不够深。</p>
+<p>我在 App Store 上找了一圈，要么太复杂，要么要注册账号，要么界面太丑 — 对，我承认我对"好不好看"这件事很挑剔。一个 App 如果不好看，我不会用它。</p>
 
-<p>我选择用 SwiftUI 做原生应用。启动快、内存低、和 macOS / iOS 系统的体验一致。该快的地方快，该省的地方省。</p>
+<p>那时候 AI 已经很强了。我想：既然找不到满意的，我能不能自己做一个？</p>
 
-<h2>为什么本地</h2>
+<h2>我不是程序员，我是产品经理</h2>
 
-<p>你的日记和语音是很私人的数据。我不想碰它们，也没理由碰它们。所以所有数据都存在你自己的设备上，不上传云端，不追踪行为。我甚至不运营任何服务器。</p>
+<p>我很清楚自己的角色。我不会写代码，但我知道我要什么：打开就能写，关掉就走，数据存在本地，界面要干净漂亮，支持 Markdown，能导出 PDF。</p>
 
-<p>AI 功能使用你自己的 API Key，费用透明。本地 Ollama 模型完全免费，离线也能用。</p>
+<p>AI 是我的开发搭档。我告诉它我要什么，它帮我实现。遇到问题一起调试，一步一步把产品做出来。</p>
+
+<p>这个 App 叫 <a href="../babyjournal/">BabyJournal</a>。名字来自我的小外甥女 — 我希望妹妹能用它记录孩子成长的每一个瞬间。而我自己，也终于有了一个称心的日志工具。</p>
+
+<h2>第二个 App：因为不信任</h2>
+
+<p>做完日志 App 之后，我在跟 AI 工具对话时发现打字效率太低了，需要语音输入。</p>
+
+<p>Mac 自带的语音输入差强人意。市面上的语音输入法倒是有几个不错的，但我不想用。微信的语音输入、豆包的语音输入 — 我的声音会被传到他们的服务器上。我不信任这件事。</p>
+
+<p>在保险行业工作这么多年，我见过太多关于数据的事情。我觉得隐私不是一个功能，是一个底线。</p>
+
+<p>所以我又造了一个：<a href="../voicejar/">VoiceJar</a>。语音识别基于 Apple 本地框架，不经过任何第三方服务器。按住说话，松开就输入。选中文字还能一键翻译。</p>
+
+<h2>35 岁危机之后</h2>
+
+<p>说实话，做这些事还有一个更深层的原因。</p>
+
+<p>我 40 岁了。在中国，35 岁就被叫"危机"。保险行业在变，内勤岗位在缩减，身边的同龄人或多或少都有类似的焦虑。</p>
+
+<p>我不想等着被选择。我想自己找一条新路。</p>
+
+<p>AI 让一个不会写代码的人，也能做出上架 App Store 的产品。这不是鸡汤，这是我正在经历的事情。以前一个团队花几个月、投入大量资金才能做的事，现在一个人加一个 AI 就能完成。</p>
+
+<p>我觉得这扇门不只为我打开。很多和我一样的人 — 有想法、有需求、有审美，只是不会写代码 — 都可以走过来。</p>
 
 <h2>接下来</h2>
 
-<p>这个博客会记录我的开发过程、工具设计的思考、以及独立开发的日常。如果你对这些话题感兴趣，欢迎常来看看。</p>
+<p>这个博客会记录我作为一个非程序员的造物过程：怎么用 AI 做产品、踩过哪些坑、以及一个 40 岁的人怎么重新出发。</p>
 
-<p>如果你觉得我的工具好用，告诉一个朋友就是最好的支持。</p>
+<p>如果你也在想"我能不能做点什么" — 能的。</p>
 
 <p>— 志宏</p>
         </div>
