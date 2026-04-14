@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BabyJournal — 免费轻量日记 App | macOS + iOS 原生，数据本地存储</title>
-    <meta name="description" content="BabyJournal 是一款完全免费的轻量日记应用。SwiftUI 原生开发，支持 macOS 和 iOS。数据本地存储，支持语音写日记和多种 AI 辅助写作引擎。即开即写，你的日记只属于你自己。">
-    <meta name="keywords" content="日记app,日记软件,免费日记,mac日记,iOS日记,本地存储日记,AI写作,语音日记,隐私日记,Day One替代,独立开发">
+    <meta name="description" content="BabyJournal 是一款完全免费的轻量日记应用。SwiftUI 原生开发，支持 macOS 和 iOS。数据本地存储，支持语音写日记和多种 AI 辅助写作引擎。">
+    <meta name="keywords" content="日记app,日记软件,免费日记,mac日记,iOS日记,本地存储日记,AI写作,语音日记,隐私日记,Day One替代">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://tangzhihong.com/babyjournal/">
-    <meta property="og:title" content="BabyJournal — 免费轻量日记 App | macOS + iOS 原生">
-    <meta property="og:description" content="完全免费的轻量日记应用。SwiftUI 原生开发，数据本地存储，支持语音写日记和多种 AI 辅助写作引擎。">
+    <meta property="og:title" content="BabyJournal — 免费轻量日记 App">
+    <meta property="og:description" content="完全免费的轻量日记应用。SwiftUI 原生开发，数据本地存储，支持多种 AI 辅助写作引擎。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tangzhihong.com/babyjournal/">
     <meta property="og:image" content="https://tangzhihong.com/og-image.svg">
@@ -24,135 +24,170 @@
 <body>
 
     <div class="nav"><div class="nav-inner">
-        <a href="../" class="nav-logo">志宏</a>
+        <a href="../" class="nav-logo">唐志宏</a>
         <div class="nav-links">
             <a href="../voicejar/">VoiceJar</a>
             <a href="../babyjournal/" class="active">BabyJournal</a>
             <a href="../blog/">Blog</a>
-                <a href="../pricing/">Pricing</a>
+            <a href="../pricing/">Pricing</a>
         </div>
     </div></div>
 
-    <div class="container">
-
-        <div class="hero">
-            <h1>BabyJournal</h1>
-            <p class="sub">轻量日志，专注记录。<br>打开就写，关掉就走。</p>
-            <div class="dl">
-                <a href="./BabyJournal.dmg" class="btn">
-                    <svg viewBox="0 0 16 16" fill="none"><path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Download for macOS
-                </a>
-                <span class="meta">v1.0.0&ensp;·&ensp;macOS 14.0+</span>
+    <!-- Hero — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <div class="hero">
+                <img src="icon-web.png" alt="BabyJournal" class="app-icon-hero">
+                <h1 class="headline-hero">BabyJournal</h1>
+                <p class="subtitle">打开就写，关掉就走。</p>
+                <div class="cta-group">
+                    <a href="./BabyJournal.dmg" class="btn-primary">
+                        <svg viewBox="0 0 16 16" fill="none" width="15" height="15"><path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Download for macOS
+                    </a>
+                    <a href="./BabyJournal.ipa" class="btn-pill">Download for iOS</a>
+                </div>
+                <p class="meta">v1.0.0 · macOS 14.0+ · iOS 17.0+ · 完全免费</p>
             </div>
-            <div class="dl" style="margin-top:12px">
-                <a href="./BabyJournal.ipa" class="btn" style="background:var(--accent2,#34c759)">
-                    <svg viewBox="0 0 16 16" fill="none"><path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Download for iOS (.ipa)
-                </a>
-                <span class="meta">v1.0.0&ensp;·&ensp;iOS 17.0+</span>
+            <div class="screenshot-showcase">
+                <img src="screenshot-mac.jpg" alt="BabyJournal macOS 编辑界面">
             </div>
         </div>
+    </div>
 
-        <hr class="divider">
+    <!-- Privacy — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">你的日记，只属于你。</h2>
+            <p class="subtitle">所有数据本地存储。不依赖云服务，不运营服务器。<br>我们无法接触你的任何数据。</p>
+        </div>
+    </div>
 
-        <section>
-            <h2 class="slabel">Features</h2>
-            <div class="features">
-                <div class="fc"><h3><span>⚡</span> 即开即写</h3><p>原生 SwiftUI 构建，启动迅速。没有加载画面，打开就是编辑器。</p><div class="tag-row"><span class="tag">#native</span><span class="tag">#fast</span></div></div>
-                <div class="fc"><h3><span>🔒</span> 数据本地</h3><p>SwiftData 本地存储，你的日记只属于你。不依赖任何云服务，我们无法接触你的任何数据。</p><div class="tag-row"><span class="tag">#privacy</span><span class="tag">#offline</span></div></div>
-                <div class="fc"><h3><span>🤖</span> AI 辅助</h3><p>支持 Claude、DeepSeek、Gemini 等多种 AI 引擎，帮你润色文字、整理思路。</p><div class="tag-row"><span class="tag">#multi-engine</span><span class="tag">#ai-writing</span></div></div>
-                <div class="fc"><h3><span>🎙</span> 语音写日记</h3><p>想到什么就说什么——语音直接变日记。与 VoiceJar 无缝配合，URL Scheme 自动传输文字。</p><div class="tag-row"><span class="tag">#voicejar</span><span class="tag">#url-scheme</span></div></div>
-                <div class="fc"><h3><span>🧹</span> 极简设计</h3><p>没有多余功能，没有社交分享，没有花哨模板。只有你和你的文字。</p><div class="tag-row"><span class="tag">#minimal</span><span class="tag">#focused</span></div></div>
-                <div class="fc"><h3><span>🔍</span> 快速检索</h3><p>全文搜索，按日期、标签筛选。写过的每一个字都能快速找回。</p><div class="tag-row"><span class="tag">#search</span><span class="tag">#tags</span></div></div>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">你的日记，只属于你</h2>
-            <div class="values">
-                <div class="value-item">
-                    <h3>你的日记只存在你的设备上</h3>
-                    <p>所有数据使用 SwiftData 本地存储，不依赖任何云服务。我们不运营服务器，无法接触你的任何数据。</p>
+    <!-- AI — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <h2 class="headline-section">AI 帮你回忆。</h2>
+            <p class="subtitle">写完日记，AI Reflect 给你温暖的回应。<br>像一个懂你的朋友，陪你重新看见那些值得记住的瞬间。</p>
+            <div class="screenshot-grid">
+                <div style="text-align:center">
+                    <img src="screenshot-ios.jpg" alt="BabyJournal iOS AI Reflect">
+                    <p class="screenshot-caption">AI Reflect 智能回应</p>
                 </div>
-                <div class="value-item">
-                    <h3>不是浏览器套壳，是真正的原生应用</h3>
-                    <p>SwiftUI 构建，支持 macOS 和 iOS。启动快、内存占用低、系统集成深，体验和系统自带应用一样流畅。</p>
-                </div>
-                <div class="value-item">
-                    <h3>AI 费用由你自己控制</h3>
-                    <p>AI 功能使用你自己的 API Key，用多少花多少，完全透明。本地 Ollama 模型完全免费，离线也能用。</p>
-                </div>
-                <div class="value-item">
-                    <h3>完全免费，没有订阅陷阱</h3>
-                    <p>所有功能开箱即用。没有试用期、没有高级版、没有弹窗催你付费。好工具不该被价格挡住。</p>
+                <div style="text-align:center">
+                    <img src="screenshot-ai.jpg" alt="BabyJournal AI 引擎配置">
+                    <p class="screenshot-caption">7 种 AI 引擎 + 本地模型</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <hr class="divider">
+    <!-- Native — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">原生应用，不是浏览器套壳。</h2>
+            <p class="subtitle">SwiftUI 构建，支持 macOS 和 iOS。<br>启动快、内存低、系统集成深。</p>
+        </div>
+    </div>
 
-        <section>
-            <h2 class="slabel">Getting Started</h2>
+    <!-- Features — White -->
+    <div class="section section-white">
+        <div class="section-inner">
+            <h2 class="headline-section">功能一览。</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">&#9889;</div>
+                    <div class="feature-title">即开即写</div>
+                    <div class="feature-desc">原生 SwiftUI，启动迅速。打开就是编辑器。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128274;</div>
+                    <div class="feature-title">数据本地</div>
+                    <div class="feature-desc">SwiftData 存储，你的日记只属于你。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#129302;</div>
+                    <div class="feature-title">AI 辅助</div>
+                    <div class="feature-desc">Claude、DeepSeek、Gemini 等多引擎支持。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#127908;</div>
+                    <div class="feature-title">语音写日记</div>
+                    <div class="feature-desc">与 VoiceJar 联动，说话直接变日记。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128270;</div>
+                    <div class="feature-title">快速检索</div>
+                    <div class="feature-desc">全文搜索，按日期、标签筛选。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128196;</div>
+                    <div class="feature-title">PDF / Markdown 导出</div>
+                    <div class="feature-desc">一键导出，数据永远在你手中。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Getting Started — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">三步开始。</h2>
             <ol class="gs">
                 <li>下载 <code>.dmg</code> 并打开，将 BabyJournal 拖入 Applications</li>
                 <li>首次打开右键选择「打开」</li>
                 <li>开始写你的第一篇日记</li>
             </ol>
-        </section>
+        </div>
+    </div>
 
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">What's New</h2>
+    <!-- What's New — White -->
+    <div class="section section-white">
+        <div class="section-inner">
+            <h2 class="headline-section">最新动态。</h2>
             <div class="changelog">
                 <div class="cl-entry">
                     <h3>v1.1.0 <span class="cl-date">2026-04-08</span></h3>
                     <ul>
-                        <li>修复 AI 服务地址输入错误时的崩溃问题（URL 安全校验）</li>
-                        <li>AI 请求增加 HTTP 状态码检查，API 异常时显示明确错误信息</li>
-                        <li>AI 服务改为全局单例，停止生成按钮现在能正确停止所有请求</li>
-                        <li>修复潜在的第三方库冲突（移除全局 String: Identifiable 扩展）</li>
-                        <li>优化列表滚动性能（DateFormatter 静态缓存，减少 GC 压力）</li>
-                        <li>macOS 照片压缩现在正确尊重文件大小限制</li>
-                        <li>精简重复代码（统一 Hex 颜色解析）</li>
+                        <li>修复 AI 服务地址输入错误时的崩溃问题</li>
+                        <li>AI 请求增加 HTTP 状态码检查</li>
+                        <li>AI 服务改为全局单例，停止生成按钮正确工作</li>
+                        <li>优化列表滚动性能</li>
+                        <li>macOS 照片压缩正确尊重文件大小限制</li>
                     </ul>
                 </div>
                 <div class="cl-entry">
                     <h3>v1.0.0 <span class="cl-date">2026-04-06</span></h3>
                     <ul>
                         <li>首个发布版本</li>
-                        <li>SwiftUI + SwiftData 原生构建，支持 iOS / macOS</li>
-                        <li>笔记本管理、标签、照片、Markdown 编辑</li>
-                        <li>AI 对话助手，支持 Claude、DeepSeek、Gemini、千问等多引擎</li>
-                        <li>本地 MLX 模型推理，完全离线 AI</li>
+                        <li>SwiftUI + SwiftData 原生构建</li>
+                        <li>AI 对话助手，支持多引擎</li>
+                        <li>本地 MLX 模型推理，完全离线</li>
                         <li>PDF / Markdown 导出</li>
-                        <li>8 套主题配色 + 5 级字号调节</li>
+                        <li>8 套主题配色 + 5 级字号</li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <div class="cta-card">
-                <p class="slabel">Free</p>
-                <p class="desc">完全免费，没有试用期，没有功能限制。好用就分享给朋友。</p>
-                <a href="../pricing/" class="btn">了解更多 &rarr;</a>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <div class="footer"><div class="footer-inner">
-            <div class="footer-col"><h4>Products</h4><a href="../voicejar/">VoiceJar</a><a href="../babyjournal/">BabyJournal</a></div>
-            <div class="footer-col"><h4>Links</h4><a href="../blog/">Blog</a>
-                <a href="../pricing/">Pricing</a><a href="../privacy.html">Privacy</a><a href="mailto:hi@tangzhihong.com">Contact</a></div>
-        </div><p class="footer-copy">&copy; 2026 唐志宏</p></div>
-
+        </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="../voicejar/">VoiceJar</a>
+                <a href="../babyjournal/">BabyJournal</a>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <a href="../blog/">Blog</a>
+                <a href="../pricing/">Pricing</a>
+                <a href="../privacy.html">Privacy</a>
+                <a href="mailto:hi@tangzhihong.com">Contact</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 唐志宏</p>
+    </div>
+
 </body>
 </html>

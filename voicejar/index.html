@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoiceJar — 免费 macOS 语音输入法 | 按住说话，松开即输入</title>
-    <meta name="description" content="VoiceJar 是一款完全免费的 macOS 原生语音输入法。按住快捷键说话，松开即输入文字。支持全局使用、实时流式识别、AI 润色、划词翻译。数据本地处理，不上传云端。">
-    <meta name="keywords" content="macOS语音输入法,mac语音转文字,语音输入,AI润色,划词翻译,免费输入法,macOS工具,讯飞替代,SuperWhisper替代">
+    <meta name="description" content="VoiceJar 是一款完全免费的 macOS 原生语音输入法。按住快捷键说话，松开即输入文字。支持全局使用、实时流式识别、AI 润色。数据本地处理。">
+    <meta name="keywords" content="macOS语音输入法,mac语音转文字,语音输入,AI润色,免费输入法,macOS工具">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://tangzhihong.com/voicejar/">
-    <meta property="og:title" content="VoiceJar — 免费 macOS 语音输入法 | 按住说话，松开即输入">
-    <meta property="og:description" content="完全免费的 macOS 原生语音输入法。按住快捷键说话，松开即输入文字。全局可用，实时识别，AI 润色。">
+    <meta property="og:title" content="VoiceJar — 免费 macOS 语音输入法">
+    <meta property="og:description" content="完全免费的 macOS 原生语音输入法。按住说话，松开即输入。全局可用，实时识别，AI 润色。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tangzhihong.com/voicejar/">
     <meta property="og:image" content="https://tangzhihong.com/og-image.svg">
@@ -24,95 +24,119 @@
 <body>
 
     <div class="nav"><div class="nav-inner">
-        <a href="../" class="nav-logo">志宏</a>
+        <a href="../" class="nav-logo">唐志宏</a>
         <div class="nav-links">
             <a href="../voicejar/" class="active">VoiceJar</a>
             <a href="../babyjournal/">BabyJournal</a>
             <a href="../blog/">Blog</a>
-                <a href="../pricing/">Pricing</a>
+            <a href="../pricing/">Pricing</a>
         </div>
     </div></div>
 
-    <div class="container">
-
-        <div class="hero">
-            <h1>VoiceJar</h1>
-            <p class="sub">按住说话，松开输入。<br>macOS 全局语音输入，为中文深度优化。</p>
-            <div class="dl">
-                <a href="./VoiceJar.dmg" class="btn">
-                    <svg viewBox="0 0 16 16" fill="none"><path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Download for macOS
-                </a>
-                <span class="meta">v1.0.0&ensp;·&ensp;完全免费&ensp;·&ensp;macOS 14.0+</span>
+    <!-- Hero — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <div class="hero">
+                <h1 class="headline-hero">VoiceJar</h1>
+                <p class="subtitle">按住说话，松开输入。</p>
+                <div class="cta-group">
+                    <a href="./VoiceJar.dmg" class="btn-primary">
+                        <svg viewBox="0 0 16 16" fill="none" width="15" height="15"><path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Download for macOS
+                    </a>
+                </div>
+                <p class="meta">v1.0.0 · macOS 14.0+ · 完全免费</p>
+            </div>
+            <div class="vj-preview-wrap">
+                <div>
+                    <div class="vj-bubble">今天的天气真不错，适合出去走走</div>
+                    <div class="vj-status">
+                        <div class="vj-dot"></div>
+                        <span>正在识别...</span>
+                    </div>
+                    <div style="text-align:center">
+                        <span class="vj-kbd">fn 按住说话</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <hr class="divider">
+    <!-- Realtime — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">边说边出字。</h2>
+            <p class="subtitle">流式语音转文字，基于 Apple Speech 框架。<br>延迟极低，边说边看到文字出现。</p>
+        </div>
+    </div>
 
-        <section>
-            <h2 class="slabel">Features</h2>
-            <div class="features">
-                <div class="fc">
-                    <h3><span>🗣</span> 实时识别</h3>
-                    <p>流式语音转文字，边说边出字。基于 Apple Speech 框架，延迟极低。</p>
-                    <div class="tag-row"><span class="tag">#streaming</span><span class="tag">#low-latency</span></div>
+    <!-- Global — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <h2 class="headline-section">任何 App，随时说。</h2>
+            <p class="subtitle">全局快捷键，任何应用、任何输入框都能用。<br>不抢焦点，不打断工作流。</p>
+        </div>
+    </div>
+
+    <!-- AI Polish — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">AI 帮你整理。</h2>
+            <p class="subtitle">自动修正同音字、补标点、去口头禅。<br>支持 Ollama、Claude、DeepSeek、Gemini。</p>
+        </div>
+    </div>
+
+    <!-- Privacy — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <h2 class="headline-section">你的声音不会被上传。</h2>
+            <p class="subtitle">语音识别基于 Apple 本地框架，不经过第三方服务器。<br>AI 润色使用你自己的 API Key，费用完全透明。</p>
+        </div>
+    </div>
+
+    <!-- Features — White -->
+    <div class="section section-white">
+        <div class="section-inner">
+            <h2 class="headline-section">功能一览。</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">&#128483;</div>
+                    <div class="feature-title">实时识别</div>
+                    <div class="feature-desc">流式语音转文字，边说边出字。</div>
                 </div>
-                <div class="fc">
-                    <h3><span>🌐</span> 全局可用</h3>
-                    <p>任何应用、任何输入框，按住 Fn 即可语音输入。不抢焦点，不打断工作流。</p>
-                    <div class="tag-row"><span class="tag">#global-hotkey</span><span class="tag">#non-intrusive</span></div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#127760;</div>
+                    <div class="feature-title">全局可用</div>
+                    <div class="feature-desc">任何 App，按住 Fn 即可语音输入。</div>
                 </div>
-                <div class="fc">
-                    <h3><span>⚡</span> 双模式</h3>
-                    <p>即时上屏 — 松开即输入。润色上屏 — AI 整理后再输入。双击 Fn 自由切换。</p>
-                    <div class="tag-row"><span class="tag">#instant</span><span class="tag">#polished</span></div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#9889;</div>
+                    <div class="feature-title">双模式</div>
+                    <div class="feature-desc">即时上屏 / AI 润色上屏，双击 Fn 切换。</div>
                 </div>
-                <div class="fc">
-                    <h3><span>✨</span> AI 润色</h3>
-                    <p>自动修正同音字、补标点、去口头禅。支持 Ollama、Claude、DeepSeek、Gemini。</p>
-                    <div class="tag-row"><span class="tag">#multi-engine</span><span class="tag">#local-first</span></div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#10024;</div>
+                    <div class="feature-title">AI 润色</div>
+                    <div class="feature-desc">多引擎支持，修正同音字、补标点。</div>
                 </div>
-                <div class="fc">
-                    <h3><span>💬</span> 浮窗预览</h3>
-                    <p>光标附近实时显示识别文字，毛玻璃圆角气泡，Apple 原生设计风格。</p>
-                    <div class="tag-row"><span class="tag">#overlay</span><span class="tag">#apple-style</span></div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128172;</div>
+                    <div class="feature-title">浮窗预览</div>
+                    <div class="feature-desc">光标附近实时显示，毛玻璃设计。</div>
                 </div>
-                <div class="fc">
-                    <h3><span>🇨🇳</span> 中文优化</h3>
-                    <p>默认中文识别，中英混输自动处理。为中文用户的日常场景深度调优。</p>
-                    <div class="tag-row"><span class="tag">#chinese</span><span class="tag">#mixed-input</span></div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#127464;&#127475;</div>
+                    <div class="feature-title">中文优化</div>
+                    <div class="feature-desc">默认中文识别，中英混输自动处理。</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">不一样在哪</h2>
-            <div class="values">
-                <div class="value-item">
-                    <h3>不是浏览器套壳，是真正的 macOS 原生应用</h3>
-                    <p>SwiftUI 构建，不依赖 Electron 或 WebView。启动快、内存占用低、系统集成深。</p>
-                </div>
-                <div class="value-item">
-                    <h3>AI 费用完全透明——用你自己的 API Key</h3>
-                    <p>不代收、不加价、不限次。用多少花多少，账单在你自己的 API 后台，没有中间商。</p>
-                </div>
-                <div class="value-item">
-                    <h3>所有语音数据只在你的设备上处理</h3>
-                    <p>语音识别基于 Apple 本地框架，不经过第三方服务器。你的声音永远不会被上传。</p>
-                </div>
-                <div class="value-item">
-                    <h3>完全免费，没有隐藏收费</h3>
-                    <p>没有试用期、没有高级版、没有功能阉割。所有功能开箱即用，现在和将来都免费。</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">How it works</h2>
+    <!-- How it works — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">三步上手。</h2>
             <div class="steps-list">
                 <div class="step-row">
                     <div class="step-num"></div>
@@ -132,61 +156,35 @@
                     <div class="step-num"></div>
                     <div class="step-text">
                         <h3>双击 Fn 切换模式</h3>
-                        <p>红点 = 即时模式，紫点 = 润色模式。AI 帮你整理后再上屏。</p>
+                        <p>红点 = 即时模式，紫点 = 润色模式。</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">Getting Started</h2>
-            <ol class="gs">
-                <li>下载 <code>.dmg</code> 并打开，将 VoiceJar 拖入 Applications</li>
-                <li>首次打开右键选择「打开」</li>
-                <li>按引导授权辅助功能、麦克风、语音识别</li>
-                <li>按住 Fn，开始说话</li>
-            </ol>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">What's New</h2>
+    <!-- What's New — White -->
+    <div class="section section-white">
+        <div class="section-inner">
+            <h2 class="headline-section">最新动态。</h2>
             <div class="changelog">
                 <div class="cl-entry">
                     <h3>v1.0.0 <span class="cl-date">2026-04-12</span></h3>
                     <ul>
-                        <li>新增翻译功能 — 选中文字按快捷键即可翻译，支持中英日自动互译</li>
-                        <li>翻译引擎独立配置 — 支持 DeepSeek、Claude、Gemini、Ollama 等多引擎</li>
-                        <li>即时模式 AI 润色优化 — 润色完成后写入剪贴板，浮窗提示可替换</li>
-                        <li>设置界面新增翻译 Tab，快捷键、目标语言、引擎一站配置</li>
-                        <li>修复翻译快捷键在设置窗口后台时失效的问题</li>
-                        <li>修复中文输入法下快捷键显示为 Key(3) 的问题</li>
-                        <li>启动时主动请求权限，避免签名变更导致权限失效</li>
+                        <li>新增翻译功能 — 选中文字按快捷键即可翻译</li>
+                        <li>翻译引擎独立配置，支持多引擎</li>
+                        <li>即时模式 AI 润色优化</li>
+                        <li>设置界面新增翻译 Tab</li>
+                        <li>修复多项快捷键问题</li>
                     </ul>
                 </div>
                 <div class="cl-entry">
                     <h3>v0.3.0 <span class="cl-date">2026-04-08</span></h3>
                     <ul>
-                        <li>点击菜单栏图标直接打开设置，右键显示快捷菜单（一步到位）</li>
-                        <li>修复 CGEvent 回调内存泄漏（passRetained → passUnretained）</li>
-                        <li>Fn 键不再被拦截，其他 App 的 Fn 功能恢复正常</li>
-                        <li>修复 CGEvent tap + NSEvent monitor 双重触发问题</li>
-                        <li>浮窗波形动画隐藏时不再空转，减少 CPU 占用</li>
-                        <li>日志输出统一为 NSLog，release 构建不再丢失错误信息</li>
-                    </ul>
-                </div>
-                <div class="cl-entry">
-                    <h3>v0.2.0 <span class="cl-date">2026-04-07</span></h3>
-                    <ul>
-                        <li>统一日志系统，使用 os.Logger + 串行队列，减少 I/O 开销</li>
-                        <li>菜单栏图标改为状态驱动刷新，不再每 0.3 秒轮询</li>
-                        <li>修复浮窗在部分 App 中的潜在崩溃（AX API 安全转换）</li>
-                        <li>修复 Keychain 存储 API Key 的强制解包问题</li>
-                        <li>修复 Swift 6 严格并发模式下的线程安全警告</li>
-                        <li>代码质量全面优化，零 warning 编译通过</li>
+                        <li>菜单栏交互优化</li>
+                        <li>修复内存泄漏和双重触发问题</li>
+                        <li>Fn 键不再干扰其他 App</li>
+                        <li>浮窗动画性能优化</li>
                     </ul>
                 </div>
                 <div class="cl-entry">
@@ -194,33 +192,33 @@
                     <ul>
                         <li>首个发布版本</li>
                         <li>流式实时语音识别</li>
-                        <li>全局快捷键（Fn / 自定义组合键）</li>
-                        <li>双模式：即时上屏 / AI 润色上屏</li>
-                        <li>支持 Ollama、Claude、DeepSeek、Gemini 等多引擎</li>
+                        <li>全局快捷键 + 双模式</li>
+                        <li>多 AI 引擎支持</li>
                         <li>浮窗跟随光标，毛玻璃设计</li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <div class="cta-card">
-                <p class="slabel">Free</p>
-                <p class="desc">完全免费，没有试用期，没有功能限制。好用就分享给朋友。</p>
-                <a href="../pricing/" class="btn">了解更多 &rarr;</a>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <div class="footer"><div class="footer-inner">
-            <div class="footer-col"><h4>Products</h4><a href="../voicejar/">VoiceJar</a><a href="../babyjournal/">BabyJournal</a></div>
-            <div class="footer-col"><h4>Links</h4><a href="../blog/">Blog</a>
-                <a href="../pricing/">Pricing</a><a href="../privacy.html">Privacy</a><a href="mailto:hi@tangzhihong.com">Contact</a></div>
-        </div><p class="footer-copy">&copy; 2026 唐志宏</p></div>
-
+        </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="../voicejar/">VoiceJar</a>
+                <a href="../babyjournal/">BabyJournal</a>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <a href="../blog/">Blog</a>
+                <a href="../pricing/">Pricing</a>
+                <a href="../privacy.html">Privacy</a>
+                <a href="mailto:hi@tangzhihong.com">Contact</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 唐志宏</p>
+    </div>
+
 </body>
 </html>

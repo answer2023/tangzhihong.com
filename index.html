@@ -23,75 +23,88 @@
 </head>
 <body>
 
-    <div class="nav">
-        <div class="nav-inner">
-            <a href="./" class="nav-logo">志宏</a>
-            <div class="nav-links">
-                <a href="voicejar/">VoiceJar</a>
-                <a href="babyjournal/">BabyJournal</a>
-                <a href="blog/">Blog</a>
-                <a href="pricing/">Pricing</a>
+    <div class="nav"><div class="nav-inner">
+        <a href="./" class="nav-logo">唐志宏</a>
+        <div class="nav-links">
+            <a href="voicejar/">VoiceJar</a>
+            <a href="babyjournal/">BabyJournal</a>
+            <a href="blog/">Blog</a>
+            <a href="pricing/">Pricing</a>
+        </div>
+    </div></div>
+
+    <!-- Hero — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <div class="hero">
+                <h1 class="headline-hero">唐志宏</h1>
+                <p class="subtitle">独立开发者。做免费、本地、注重隐私的 macOS & iOS 原生工具。</p>
             </div>
         </div>
     </div>
 
-    <div class="container">
-
-        <div class="hero">
-            <h1>唐志宏</h1>
-            <p class="sub">独立开发者，做免费、本地、注重隐私的 macOS & iOS 原生工具。</p>
-        </div>
-
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">About</h2>
-            <div class="about-content">
-                <p>我是一个独立开发者，相信好工具不该被价格挡住。</p>
-                <p>我用 SwiftUI 构建原生应用，不用 Electron，不做套壳。所有数据本地存储，不上传云端，不追踪行为。</p>
-                <p>目前的两款作品：<a href="voicejar/" class="link-accent">VoiceJar</a> 是一款 macOS 语音输入法，按住说话松开即输入；<a href="babyjournal/" class="link-accent">BabyJournal</a> 是一款轻量日记，支持 macOS 和 iOS。都完全免费。</p>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">Products</h2>
+    <!-- Products — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">Products</h2>
 
             <a href="voicejar/" class="product-card">
-                <div class="product-icon product-icon-voice">🎤</div>
+                <div class="product-icon">&#127908;</div>
                 <div class="product-body">
                     <h3>VoiceJar</h3>
                     <p>macOS 语音输入法。按住说话，松开即输入。全局可用，实时识别，AI 润色。</p>
-                    <div class="product-tags">
-                        <span class="tag">#语音输入</span>
-                        <span class="tag">#AI润色</span>
-                        <span class="tag">#macOS</span>
-                    </div>
                 </div>
                 <div class="product-arrow">&rarr;</div>
             </a>
 
             <a href="babyjournal/" class="product-card">
-                <div class="product-icon product-icon-journal">📔</div>
+                <div class="product-icon">&#128212;</div>
                 <div class="product-body">
                     <h3>BabyJournal</h3>
                     <p>轻量日志 App。即开即写，数据本地存储，支持多种 AI 引擎辅助写作。</p>
-                    <div class="product-tags">
-                        <span class="tag">#日志</span>
-                        <span class="tag">#本地存储</span>
-                        <span class="tag">#AI写作</span>
-                    </div>
                 </div>
                 <div class="product-arrow">&rarr;</div>
             </a>
-        </section>
+        </div>
+    </div>
 
-        <hr class="divider">
+    <!-- About — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <h2 class="headline-section">好工具不该被价格挡住。</h2>
+            <p class="subtitle">我用 SwiftUI 构建原生应用，不用 Electron，不做套壳。<br>所有数据本地存储，不上传云端，不追踪行为。</p>
+        </div>
+    </div>
 
-        <section>
-            <h2 class="slabel">Blog</h2>
-            <p class="section-desc">开发笔记、工具思考、独立开发的日常。</p>
+    <!-- Values — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>原生应用</h3>
+                    <p>SwiftUI 构建，不是套壳 Electron。启动快，占用低。</p>
+                </div>
+                <div class="value-card">
+                    <h3>数据本地</h3>
+                    <p>所有数据存在你的电脑上，不上传云端，不追踪行为。</p>
+                </div>
+                <div class="value-card">
+                    <h3>完全免费</h3>
+                    <p>没有试用期，没有内购，没有广告。所有功能开箱即用。</p>
+                </div>
+                <div class="value-card">
+                    <h3>独立开发</h3>
+                    <p>一个人做的工具，给在意细节的人。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog — Dark -->
+    <div class="section section-dark">
+        <div class="section-inner">
+            <h2 class="headline-section">Blog</h2>
+            <p class="subtitle">开发笔记、工具思考、独立开发的日常。</p>
             <div class="blog-list">
                 <a href="blog/hello-world.html" class="blog-item">
                     <span class="blog-date">2026-04-12</span>
@@ -99,78 +112,48 @@
                     <p>我是唐志宏，一个独立开发者。这是我的第一篇博客，聊聊为什么我选择把自己用的工具免费分享出来。</p>
                 </a>
             </div>
-            <a href="blog/" class="link-accent" style="font-size:14px">查看全部文章 &rarr;</a>
-        </section>
+            <a href="blog/" class="link-more" style="margin-top:24px">查看全部文章 &rarr;</a>
+        </div>
+    </div>
 
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">Why Free</h2>
-            <div class="values">
-                <div class="value-item">
-                    <h3>原生应用</h3>
-                    <p>SwiftUI 构建，不是套壳 Electron。启动快，占用低。</p>
-                </div>
-                <div class="value-item">
-                    <h3>数据本地</h3>
-                    <p>所有数据存在你的电脑上，不上传云端，不追踪行为。</p>
-                </div>
-                <div class="value-item">
-                    <h3>完全免费</h3>
-                    <p>所有功能免费使用，没有试用期，没有内购，没有广告。</p>
-                </div>
-                <div class="value-item">
-                    <h3>独立开发</h3>
-                    <p>一个人做的工具，给在意细节的人。</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <section>
-            <h2 class="slabel">用户说</h2>
+    <!-- Testimonials — Light -->
+    <div class="section section-light">
+        <div class="section-inner">
+            <h2 class="headline-section">用户说。</h2>
             <div class="testimonials">
                 <div class="testimonial-item">
                     <p class="testimonial-text">"VoiceJar 终于让我在 Mac 上告别了打字，按住说话松开就好，太自然了。"</p>
-                    <div class="testimonial-author">
-                        <span class="testimonial-name">— 一位 macOS 用户</span>
-                    </div>
+                    <span class="testimonial-name">— 一位 macOS 用户</span>
                 </div>
                 <div class="testimonial-item">
                     <p class="testimonial-text">"BabyJournal 打开就能写，没有花里胡哨的功能，数据还不用上传，用着安心。"</p>
-                    <div class="testimonial-author">
-                        <span class="testimonial-name">— 一位日记爱好者</span>
-                    </div>
+                    <span class="testimonial-name">— 一位日记爱好者</span>
                 </div>
                 <div class="testimonial-item">
                     <p class="testimonial-text">"免费还原生，不收集数据，这种独立开发者做的工具太少了。"</p>
-                    <div class="testimonial-author">
-                        <span class="testimonial-name">— 一位隐私关注者</span>
-                    </div>
+                    <span class="testimonial-name">— 一位隐私关注者</span>
                 </div>
             </div>
-        </section>
-
-        <hr class="divider">
-
-        <div class="footer">
-            <div class="footer-inner">
-                <div class="footer-col">
-                    <h4>Products</h4>
-                    <a href="voicejar/">VoiceJar</a>
-                    <a href="babyjournal/">BabyJournal</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Links</h4>
-                    <a href="blog/">Blog</a>
-                    <a href="pricing/">Pricing</a>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="mailto:hi@tangzhihong.com">Contact</a>
-                </div>
-            </div>
-            <p class="footer-copy">&copy; 2026 唐志宏</p>
         </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="voicejar/">VoiceJar</a>
+                <a href="babyjournal/">BabyJournal</a>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <a href="blog/">Blog</a>
+                <a href="pricing/">Pricing</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="mailto:hi@tangzhihong.com">Contact</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 唐志宏</p>
     </div>
 
 </body>
