@@ -465,7 +465,7 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
 }, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("a", {
   href: "privacy.html"
 }, "Privacy"), /*#__PURE__*/React.createElement("a", {
-  href: "mailto:hi@tangzhihong.com"
+  href: "mailto:xtry96@gmail.com"
 }, "Email"))), /*#__PURE__*/React.createElement("div", {
   className: "footer-legal"
 }, /*#__PURE__*/React.createElement("span", null, "Copyright \xA9 2026 ClearSky. All rights reserved."), /*#__PURE__*/React.createElement("a", {
