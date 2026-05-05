@@ -193,7 +193,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
 }, "\u4E3A\u81EA\u5DF1\u9020\u7684\u4E1C\u897F\uFF0C\u6700\u540E\u4E5F\u5E2E\u5230\u4E86\u522B\u4EBA\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "products-grid"
 }, /*#__PURE__*/React.createElement("a", {
-  href: "https://tangzhihong.com/voicebee/",
+  href: "https://voicebee.tangzhihong.com/",
   className: "product-tile"
 }, /*#__PURE__*/React.createElement("div", {
   className: "product-tile-head"
@@ -424,7 +424,7 @@ const CTA = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6240\u6709\u5DE5\u5177\u5B8C\u5168\u514D\u8D39\u3002\u6CA1\u6709\u5185\u8D2D\uFF0C\u6CA1\u6709\u5E7F\u544A\uFF0C\u6CA1\u6709\u8D26\u53F7\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "cta-buttons"
 }, /*#__PURE__*/React.createElement("a", {
-  href: "https://tangzhihong.com/voicebee/",
+  href: "https://voicebee.tangzhihong.com/",
   className: "btn btn-primary"
 }, /*#__PURE__*/React.createElement(Icon, {
   name: "download",
@@ -451,7 +451,7 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
 }, "\u72EC\u7ACB\u5DE5\u4F5C\u5BA4\u3002\u4E00\u4EBA + AI\uFF0C\u505A\u81EA\u5DF1\u9700\u8981\u7684\u5DE5\u5177\u3002")), /*#__PURE__*/React.createElement("div", {
   className: "footer-col"
 }, /*#__PURE__*/React.createElement("h4", null, "Products"), /*#__PURE__*/React.createElement("a", {
-  href: "https://tangzhihong.com/voicebee/"
+  href: "https://voicebee.tangzhihong.com/"
 }, "VoiceBee"), /*#__PURE__*/React.createElement("a", {
   href: "https://jotbee.app"
 }, "JotBee")), /*#__PURE__*/React.createElement("div", {
