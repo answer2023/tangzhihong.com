@@ -229,7 +229,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "JotBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "iOS \xB7 macOS \xB7 v1.1.0"))), /*#__PURE__*/React.createElement("div", {
+}, "iOS \xB7 macOS \xB7 v1.2.0"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u968F\u624B\u8BB0\u5F55\uFF0C\u917F\u9020\u751F\u6D3B\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -257,6 +257,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.06.12"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "JotBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.2.0")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "\u5199\u65e5\u8bb0\u81ea\u52a8\u8bb0\u5f55\u5f53\u65f6\u5929\u6c14\uff0c\u65f6\u95f4\u7ebf\u5929\u6c14\u56fe\u6807\u7115\u65b0"), /*#__PURE__*/React.createElement("li", null, "\u8be6\u60c5\u9875\u65b0\u589e\u5929\u6c14\u5361\u7247\uff1a\u6e29\u5ea6 \xB7 \u4f53\u611f \xB7 \u57ce\u5e02"), /*#__PURE__*/React.createElement("li", null, "\u4fee\u590d\u90e8\u5206\u60c5\u51b5\u4e0b\u5929\u6c14\u65e0\u6cd5\u83b7\u53d6\u7684\u95ee\u9898"), /*#__PURE__*/React.createElement("li", null, "AI \u52a9\u624b\u914d\u7f6e\u9519\u8bef\u65f6\u7ed9\u51fa\u660e\u786e\u63d0\u793a\uff0c\u505c\u6b62\u54cd\u5e94\u66f4\u53ca\u65f6")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
