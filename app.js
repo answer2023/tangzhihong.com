@@ -205,13 +205,13 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "macOS \xB7 v1.2.1"))), /*#__PURE__*/React.createElement("div", {
+}, "macOS \xB7 v1.3.0"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u6309\u4F4F\u8BF4\u8BDD\uFF0C\u677E\u5F00\u8F93\u5165\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
 }, "macOS \u539F\u751F\u8BED\u97F3\u8F93\u5165\u6CD5\u3002\u6D41\u5F0F\u8BC6\u522B\uFF0CAI \u6DA6\u8272\uFF0C\u9009\u4E2D\u5373\u7FFB\u8BD1\u3002\u4EFB\u4F55 App \u4EFB\u4F55\u8F93\u5165\u6846\u53EF\u7528\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-features"
-}, /*#__PURE__*/React.createElement("span", null, "5 \u79CD\u8BED\u8A00"), /*#__PURE__*/React.createElement("span", null, "\u5168\u5C40\u5FEB\u6377\u952E"), /*#__PURE__*/React.createElement("span", null, "\u672C\u5730\u8BC6\u522B"), /*#__PURE__*/React.createElement("span", null, "AI \u6DA6\u8272")), /*#__PURE__*/React.createElement("span", {
+}, /*#__PURE__*/React.createElement("span", null, "5 \u79CD\u8BED\u8A00"), /*#__PURE__*/React.createElement("span", null, "\u5168\u5C40\u5FEB\u6377\u952E"), /*#__PURE__*/React.createElement("span", null, "可离线识别"), /*#__PURE__*/React.createElement("span", null, "AI \u6DA6\u8272")), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-cta"
 }, "\u4E86\u89E3\u66F4\u591A ", /*#__PURE__*/React.createElement(Icon, {
   name: "arrow-right",
@@ -274,7 +274,7 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
   className: "update-content"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee ", /*#__PURE__*/React.createElement("span", {
   className: "update-version"
-}, "v1.2.1")), /*#__PURE__*/React.createElement("ul", {
+}, "v1.3.0")), /*#__PURE__*/React.createElement("ul", {
   className: "update-list"
 }, /*#__PURE__*/React.createElement("li", null, "\u5F55\u97F3\u6D6E\u7A97\u89C6\u89C9\u7B80\u5316\uFF0C\u53BB\u9664\u591A\u4F59\u9634\u5F71"), /*#__PURE__*/React.createElement("li", null, "4 \u79CD\u8F93\u51FA\u98CE\u683C\u73B0\u5728\u7528 4 \u79CD\u989C\u8272\u533A\u5206"), /*#__PURE__*/React.createElement("li", null, "\u53CC\u51FB Fn \u5207\u6362\u98CE\u683C\u65F6\uFF0C\u63D0\u793A\u6D6E\u7A97\u7684\u989C\u8272\u4E0E\u76EE\u6807\u98CE\u683C\u4E00\u81F4")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
