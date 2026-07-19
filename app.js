@@ -176,7 +176,7 @@ const Hero = ({
   className: "hero-stat"
 }, /*#__PURE__*/React.createElement("span", {
   className: "hero-stat-dot"
-}), "2 \u6B3E App \u5728\u7EBF \xB7 \u6301\u7EED\u66F4\u65B0"))), showMockups && /*#__PURE__*/React.createElement(HeroMockups, null))));
+}), "3 \u6B3E\u4EA7\u54C1\u5728\u7EBF \xB7 \u6301\u7EED\u66F4\u65B0"))), showMockups && /*#__PURE__*/React.createElement(HeroMockups, null))));
 
 /* ===== Products ===== */
 const Products = () => /*#__PURE__*/React.createElement("section", {
@@ -188,7 +188,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "eyebrow"
 }, "\u4F5C\u54C1"), /*#__PURE__*/React.createElement("h2", {
   className: "headline-section"
-}, "\u4E24\u4E2A\u5DE5\u5177\uFF0C\u4E00\u4E2A\u5DE5\u4F5C\u5BA4\u3002"), /*#__PURE__*/React.createElement("p", {
+}, "\u4E09\u4E2A\u5DE5\u5177\uFF0C\u4E00\u4E2A\u5DE5\u4F5C\u5BA4\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "subtitle"
 }, "\u4E3A\u81EA\u5DF1\u9020\u7684\u4E1C\u897F\uFF0C\u6700\u540E\u4E5F\u5E2E\u5230\u4E86\u522B\u4EBA\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "products-grid"
@@ -240,6 +240,30 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
 }, "\u4E86\u89E3\u66F4\u591A ", /*#__PURE__*/React.createElement(Icon, {
   name: "arrow-right",
   size: 14
+}))), /*#__PURE__*/React.createElement("a", {
+  href: "https://fund.jotbee.app",
+  className: "product-tile"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-head"
+}, /*#__PURE__*/React.createElement("img", {
+  src: "assets/funddx-icon.png",
+  alt: "",
+  className: "product-tile-icon"
+}), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-meta"
+}, /*#__PURE__*/React.createElement("h3", null, "\u57FA\u91D1\u8BCA\u65AD"), /*#__PURE__*/React.createElement("span", {
+  className: "product-tile-platform"
+}, "Web \xB7 \u6388\u6743\u5185\u6D4B"))), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-tagline"
+}, "\u6362 / \u89C2\u5BDF / \u7559\uFF0C\u7ED9\u5230\u80FD\u884C\u52A8\u7684\u7ED3\u8BBA\u3002"), /*#__PURE__*/React.createElement("p", {
+  className: "product-tile-desc"
+}, "\u89C4\u5219\u5316\u57FA\u91D1\u4F53\u68C0\u5DE5\u5177\uFF1A\u5355\u57FA\u91D1\u591A\u7EF4\u6253\u5206\u3001\u7EC4\u5408\u91CD\u5408\u5EA6\u3001\u5386\u53F2\u56DE\u6D4B\u4E0E\u5E02\u573A\u6E29\u5EA6\u3002\u6570\u636E\u6765\u81EA\u516C\u5F00\u6E20\u9053\uFF0C\u8BDA\u5B9E\u6807\u6CE8\u6BCF\u4E00\u5904\u5C40\u9650\u3002"), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-features"
+}, /*#__PURE__*/React.createElement("span", null, "\u5355\u57FA\u91D1\u8BCA\u65AD"), /*#__PURE__*/React.createElement("span", null, "\u7EC4\u5408\u4F53\u68C0"), /*#__PURE__*/React.createElement("span", null, "\u5386\u53F2\u56DE\u6D4B"), /*#__PURE__*/React.createElement("span", null, "\u5E02\u573A\u6E29\u5EA6")), /*#__PURE__*/React.createElement("span", {
+  className: "product-tile-cta"
+}, "\u4E86\u89E3\u66F4\u591A ", /*#__PURE__*/React.createElement(Icon, {
+  name: "arrow-right",
+  size: 14
 }))))));
 
 /* ===== Updates timeline ===== */
@@ -257,6 +281,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.07.18"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "基金诊断 ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v2.0")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "评分口径升级：债基 / QDII / FOF 品类分流，各用各的尺子"), /*#__PURE__*/React.createElement("li", null, "行业基金按行业指数计分，基准换沪深300全收益"), /*#__PURE__*/React.createElement("li", null, "指数估值扩容：行业 / 主题指数也有近10年 PE 分位")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
