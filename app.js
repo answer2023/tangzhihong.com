@@ -161,7 +161,7 @@ const Hero = ({
     marginLeft: "auto",
     marginRight: "auto"
   } : undefined
-}, "\u6211\u662F ClearSky\u3002\u4FDD\u9669\u884C\u4E1A\u4ECE\u4E1A\u8005\uFF0C\u975E\u79D1\u73ED\u3002\u7528 AI \u505A\u51FA\u4E86\u81EA\u5DF1\u9700\u8981\u7684\u5DE5\u5177\uFF0C\u5DF2\u4E0A\u67B6 App Store\u3002"), /*#__PURE__*/React.createElement("div", {
+}, "\u6211\u662F ClearSky\u3002\u7528 AI \u505A\u51FA\u4E86\u81EA\u5DF1\u9700\u8981\u7684\u5DE5\u5177\uFF0C\u5DF2\u4E0A\u67B6 App Store\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "hero-meta"
 }, /*#__PURE__*/React.createElement("a", {
   href: "#products",
