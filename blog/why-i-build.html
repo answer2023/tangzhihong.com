@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不会写代码的人,为什么做出了三个产品 · ClearSky</title>
+    <meta name="description" content="一个非计算机专业的人,如何用 AI 做出三个产品——JotBee、VoiceBee 与基金诊断的完整故事。">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+               background: #f5f5f7; color: #1d1d1f; line-height: 1.85; -webkit-font-smoothing: antialiased; }
+        .topbar { background: #1d1d1f; padding: 14px 24px; }
+        .topbar-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; gap: 10px; }
+        .topbar a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+        .topbar img { width: 22px; height: 22px; border-radius: 6px; }
+        .topbar .crumb { color: rgba(255,255,255,.55); font-size: 14px; font-weight: 400; }
+        article { max-width: 680px; margin: 0 auto; padding: 56px 24px 80px; }
+        h1 { font-size: 34px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 14px; }
+        .meta { color: rgba(0,0,0,.48); font-size: 14px; margin-bottom: 8px; }
+        h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 44px 0 16px; }
+        p { margin: 0 0 20px; font-size: 17px; color: rgba(0,0,0,.82); }
+        strong { color: #1d1d1f; }
+        a { color: #0071e3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        hr { border: none; border-top: 1px solid rgba(0,0,0,.08); margin: 40px auto; width: 64px; }
+        ul { margin: 0 0 20px 22px; }
+        li { font-size: 17px; color: rgba(0,0,0,.82); margin-bottom: 8px; }
+        .backfoot { max-width: 680px; margin: 0 auto; padding: 0 24px 64px; font-size: 15px; }
+    </style>
+</head>
+<body>
+    <div class="topbar"><div class="topbar-inner">
+        <a href="../index.html"><img src="../assets/favicon.png" alt="">ClearSky</a>
+        <span class="crumb">/ 博客</span>
+    </div></div>
+    <article>
+        <h1>不会写代码的人,为什么做出了三个产品</h1>
+<p class="meta">ClearSky · 初稿写于 2026 年 4 月,发布前更新于 7 月</p>
+<hr>
+<p>我不是程序员。</p>
+<p>在写下这句话之前,我犹豫了一下——怕别人觉得我在卖惨,或者在铺垫什么逆袭故事。但事实就是事实:我是一名普通的保险公司员工,日常工作是管团队、写材料、做培训、组织活动。计算机专业?跟我没关系。写代码?2023 年学了两个月 Python,没坚持下来。</p>
+<p>然后到了 2026 年,我做了三个产品:两个上了 App Store,一个在网页上跑着。还搭了你正在看的这个网站。</p>
+<p>这篇文章不是教程,也不是炫耀。我想聊聊这件事到底是怎么发生的——一个保险行业的人,为什么会走到这一步。</p>
+<hr>
+<h2>一个不再维护的 App 和一个记录的习惯</h2>
+<p>我有一个保持了很久的习惯:写日记。</p>
+<p>不是发朋友圈那种,恰恰相反——我不怎么发朋友圈。自从父亲走了之后,发得越来越少了。我不太喜欢自己的生活被围观。但有些东西我想随时记录下来,给自己看。今天遇到了一个什么事、突然想通了一个什么道理、某个瞬间的感悟——这些东西如果不记,就没了。</p>
+<p>一直用的是一个开源的日记 App,简单够用。直到最近开发者不再维护,卡顿越来越严重,经常打不开。</p>
+<p>不是突然坏的,是慢慢地让人忍受不了——打开一个 App 要反复尝试好多次。我记录了好多条日记,全在里面。</p>
+<p>我开始在 App Store 上找替代品。花了整整一个周末,下载了十几个。</p>
+<p>太复杂的不要——我就想写日记,不需要标签体系、情绪追踪、AI 年度总结这些花活。要注册账号的不要——我为什么要把日记交给一个服务器?界面丑的不要——是的,我承认我对这件事很挑剔。一个 App 如果不好看,我不会用它。这不是矫情,这是标准。</p>
+<p>找了一圈,没有一个满意的。</p>
+<hr>
+<h2>"那我自己做一个吧"</h2>
+<p>这句话说出来很轻松,但当时我真正的感受是:<strong>这个想法很酷,但很有挑战。</strong></p>
+<p>我连 Python 都没学下来,做 App?用什么做?App Store 审核怎么通过?</p>
+<p>但 2025 年底到 2026 年初,AI 写代码这件事已经不是什么新鲜概念了。我在用 Claude 处理工作上的文字材料,效率很高。某一天我突然想:<strong>它能帮我写文案,能不能帮我写代码?</strong></p>
+<p>答案是:能。</p>
+<p>不是那种"它写一段代码然后我看不懂"的能,是真的能——我告诉它我要什么功能,它生成代码,我粘贴到 Xcode 里,运行,出来了。遇到报错,我把报错信息丢回去,它帮我改。一来一回,一步一步。</p>
+<p>那个过程像什么呢?像装修房子。我不会砌墙、不会布线、不会做木工,但我非常清楚我要什么样的房子:客厅要亮、厨房要大、颜色要素、收纳要多。我是业主,AI 是施工队。</p>
+<p><strong>我给自己的定位从来不是程序员,而是产品经理。</strong></p>
+<p>我负责定义需求、把控体验、审核质量。AI 负责实现。我们是搭档。</p>
+<hr>
+<h2>JotBee:第一个作品</h2>
+<p>第一个 App 最初叫 BabyJournal。</p>
+<p>名字来自我妹妹的女儿——我的小外甥女,超级可爱的小 baby。我想让妹妹有一个好用的工具,记录孩子成长的每一个瞬间。同时它也是给我自己的,替代那个卡顿到无法忍受的日记 App。</p>
+<p>后来我把它改名叫 <strong>JotBee</strong>——因为做着做着发现,记录这件事不该只属于爸妈。每个人都值得一只帮你采集生活的小蜜蜂。</p>
+<p>我对它的要求很简单也很坚决:</p>
+<p><strong>打开就能写。</strong> 不要登录、不要引导页、不要"选择你的主题"。点开就是编辑器,光标已经在那里了。写完关掉,下次打开还在。</p>
+<p><strong>数据留在本地。</strong> 这是底线。我的日记不会经过任何服务器。不是因为我有什么见不得人的内容,而是这些文字是我的,不应该成为别人的"数据资产"。</p>
+<p><strong>好看。</strong> Markdown 渲染要舒服、字体要对、配色要高级。爱美之心人皆有之,对"什么是好看"有自己的判断,不会将就。</p>
+<p>做了大概两周,macOS 版能用了。又花了一周做 iOS 版。如今双端都在 App Store 上架,iCloud 照片同步、AI Reflect 回应,一直在迭代。</p>
+<p>macOS 版上架那天晚上,我看着 App Store Connect 上显示"Ready for Distribution",坐在电脑前愣了一会儿。</p>
+<p><strong>我自己做的 App,出现在 App Store 里了。</strong></p>
+<p>这个念头在脑子里转了好几遍,有点不真实。</p>
+<hr>
+<h2>VoiceBee:因为不信任</h2>
+<p>做完 JotBee 之后,我用 AI 工具越来越频繁。每天大量的时间在跟 Claude Code 对话——调试代码、讨论方案、迭代功能。全靠打字,效率太低了。</p>
+<p>我需要语音输入。</p>
+<p>Mac 自带的语音输入功能很一般,识别率不够好,响应也慢。市面上有几个第三方的语音输入法,技术上做得不错。但我不想用。</p>
+<p>有两家大厂的语音输入法确实不错,但我过不了心里那道坎──我的声音会传到他们的服务器上。这些公司拿我的语音数据去做什么?训练模型?精准推荐?我不知道,我也不想知道。</p>
+<p>我非常注重个人隐私,这是我们最基本的权利。所以我对"隐私"这两个字有一种本能的警觉。</p>
+<p><strong>隐私不是一个功能,是一个底线。</strong></p>
+<p>所以我决定再造一个 App。语音识别完全基于 Apple 本地框架,声音数据不离开我的电脑。AI 润色和翻译用的是我自己的 API Key,费用透明,数据流向清楚。</p>
+<p><strong>VoiceBee</strong>——按住说话,松开就输入。选中任意文字,一键翻译。全局快捷键,任何应用里都能用。和 JotBee 一样,它也是一只蜜蜂。</p>
+<p>从动手到上架,大概十天。</p>
+<hr>
+<h2>第三个:离钱最近的一个</h2>
+<p>今年夏天,我又做了第三个——<strong>基金诊断</strong>:输入基金代码,它告诉你"换 / 观察 / 留",以及为什么。</p>
+<p>起因很简单:身边买基金的同事朋友不少,我自己账户里也躺着几只拿不定主意的。市面上公开的数据其实很多,但普通人不会分析,看完还是得不出结论。那就自己做一个,把结论用人话说出来,并且诚实地标注每一处局限。</p>
+<p>这个产品的故事比前两个都曲折——评分引擎推翻重来过一次,数据接口半夜塌过方,图标磨了十版。值得单独写一篇,这里不展开。</p>
+<p>它现在是网页版,凭访问码使用,不公开注册。<strong>它不构成任何投资建议</strong>——这句话我在产品里写了,在这里也要写。</p>
+<hr>
+<h2>为什么要做网站</h2>
+<p>到这一步,我已经有了三个产品。但它们散落在各处,没有一个"家"。</p>
+<p>更重要的是——我需要一个地方讲自己的故事。</p>
+<p>App Store 的产品页面能放的信息很有限。几张截图、一段描述、几行更新日志。它不能告诉别人,这个叫 ClearSky 的人是谁、为什么做这些东西、背后有什么想法。</p>
+<p>而我觉得这些"背后的东西"才是最有价值的。</p>
+<p><strong>产品会被更好的产品替代,但故事不会。</strong></p>
+<p>一个非计算机专业的人用 AI 做出三个产品——这件事本身就是一个信号:时代变了。这扇门不只为程序员打开,它也在向每一个"知道自己要什么"的人打开。</p>
+<p>我要一个地方把这件事说清楚。</p>
+<p>所以你看到了 <a href="https://tangzhihong.com/">tangzhihong.com</a>(我的主页)和 <a href="https://jotbee.app/">jotbee.app</a>(产品站,海外版在 freejournal.app)。这些网站也是我用 AI 搭的——从设计到代码,全程 AI 协作。域名用的是我的真名,因为我觉得做事要署名。品牌叫 ClearSky,晴空万里。清晰、透明。和我做产品的态度一样。</p>
+<hr>
+<h2>君子不器</h2>
+<p>孔子说"君子不器"——一个人不应该把自己局限为一种固定的工具。</p>
+<p>我在保险行业做了很多年。这份工作教会了我怎么跟人打交道、怎么组织一场活动、怎么把一件复杂的事情讲清楚。这些能力是真实的,也是有价值的。</p>
+<p>但人不能只是自己岗位上的一颗螺丝钉。</p>
+<p>我一直相信,一个人最值得投资的事情,是拓展自己能力的边界。不是为了转行,不是为了跳槽,而是为了让自己变得更完整。今天我能用 AI 做一个 App,明天说不定能做一个更有意思的东西。关键不在于做出了什么,而在于<strong>我发现了"原来我也可以"</strong>。</p>
+<p>学 Python 没坚持下来的那段经历,我曾经觉得是一个失败。但现在回头看,它其实教会了我一件事:不是所有路都要从头走。AI 的出现意味着,你不需要先变成程序员才能做产品。你需要的是知道自己要什么,然后找到对的工具。</p>
+<p><strong>2023 年我学不会写代码,2026 年我发现我根本不需要会。</strong></p>
+<p>把一个想法变成一个真实可用的产品,再看着它出现在 App Store 里——那种成就感很难用语言形容。它让我确认了一件事:我不只是某个岗位上的某个人,我是一个可以创造东西的人。</p>
+<p>这不是鸡汤。这是我正在经历的事实。</p>
+<hr>
+<h2>给同路人</h2>
+<p>如果你也是一个非技术背景的人——可能是做销售的、做行政的、做财务的、做老师的——你可能偶尔也会想:<strong>我能不能做点什么?</strong></p>
+<p>我的回答是:能的。</p>
+<p>不是因为 AI 万能,而是因为你本来就有能力。你知道什么东西好用什么东西不好用,你知道一个产品应该长什么样,你知道用户(也就是你自己)真正需要什么。这些能力不比写代码差。</p>
+<p>以前做一个 App 需要一个团队、几个月时间、几十万资金。现在需要的是:<strong>一个人、一个 AI、以及一个足够强烈的需求。</strong></p>
+<p>我不是什么天才,也不是什么"跨界达人"。我就是一个觉得自己用的日记 App 太烂、语音输入法不可信、基金工具没良心的普通人。然后我自己造了。</p>
+<p>就这样。</p>
+<hr>
+<h2>接下来</h2>
+<p>这个博客会持续更新。我会记录:</p>
+<ul>
+<li>用 AI 做产品的真实过程——不只是成功的部分,也包括踩过的坑</li>
+<li>一个非程序员怎么和 AI 协作——我的方法论和工作流</li>
+<li>产品的迭代思路——为什么加这个功能、为什么砍那个功能</li>
+<li>我对这个时代的一些观察——AI 正在改变什么,以及还没改变什么</li>
+</ul>
+<p>如果你对这些话题感兴趣,欢迎常来。</p>
+<p>如果你也想做点什么——开始吧。不需要准备好,不需要会写代码。你只需要知道自己要什么。</p>
+<p>— ClearSky</p>
+    </article>
+    <div class="backfoot"><a href="./">← 全部文章</a> · <a href="../index.html">回到主页</a></div>
+</body>
+</html>

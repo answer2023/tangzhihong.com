@@ -406,11 +406,11 @@ const Blog = () => /*#__PURE__*/React.createElement("section", {
 }, "\u4E0D\u5B9A\u671F\u66F4\u65B0\uFF0C\u5199\u70B9\u60F3\u6CD5\u548C\u8FC7\u7A0B\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "blog-list"
 }, /*#__PURE__*/React.createElement("a", {
-  href: "blog/hello-world.html",
+  href: "blog/why-i-build.html",
   className: "blog-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "blog-row-date"
-}, "2026.04.14"), /*#__PURE__*/React.createElement("h3", null, "\u4E00\u4E2A\u4FDD\u9669\u5185\u52E4\uFF0C\u4E3A\u4EC0\u4E48\u8981\u505A App \u548C\u7F51\u7AD9"), /*#__PURE__*/React.createElement("span", {
+}, "2026.07.20"), /*#__PURE__*/React.createElement("h3", null, "\u4E0D\u4F1A\u5199\u4EE3\u7801\u7684\u4EBA\uFF0C\u4E3A\u4EC0\u4E48\u505A\u51FA\u4E86\u4E09\u4E2A\u4EA7\u54C1"), /*#__PURE__*/React.createElement("span", {
   className: "blog-row-arrow"
 }, /*#__PURE__*/React.createElement(Icon, {
   name: "arrow-right",
