@@ -253,7 +253,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "JotBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "iOS \xB7 macOS \xB7 v1.2.0"))), /*#__PURE__*/React.createElement("div", {
+}, "iOS \xB7 macOS \xB7 v1.2.3"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u968F\u624B\u8BB0\u5F55\uFF0C\u917F\u9020\u751F\u6D3B\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -305,6 +305,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.08.31"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "JotBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.2.3")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "\u8865\u5199\u8FC7\u53BB\u7684\u65E5\u5B50\uFF1A\u5199\u4E4B\u524D\u5148\u9009\u65E5\u671F\uFF0C\u5DF2\u5199\u597D\u7684\u4E5F\u80FD\u6539"), /*#__PURE__*/React.createElement("li", null, "\u8865\u5199\u540E\u81EA\u52A8\u8DF3\u5230\u90A3\u4E00\u5929\uFF0C\u4E0D\u7528\u81EA\u5DF1\u5F80\u4E0B\u7FFB"), /*#__PURE__*/React.createElement("li", null, "\u754C\u9762\u7115\u65B0\uFF1A\u53BB\u6389\u533A\u5757\u786C\u5206\u9694\u7EBF\uFF0C\u6539\u7528\u7559\u767D\u4E0E\u5149\u5F71\u5206\u5C42"), /*#__PURE__*/React.createElement("li", null, "8 \u5957\u4E3B\u9898\u7684\u6587\u5B57\u5BF9\u6BD4\u5EA6\u5168\u90E8\u63D0\u5230\u65E0\u969C\u788D\u6807\u51C6")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
