@@ -352,7 +352,7 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
   className: "update-content"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee ", /*#__PURE__*/React.createElement("span", {
   className: "update-version"
-}, "v1.3.0")), /*#__PURE__*/React.createElement("ul", {
+}, "v1.2.1")), /*#__PURE__*/React.createElement("ul", {
   className: "update-list"
 }, /*#__PURE__*/React.createElement("li", null, "\u5F55\u97F3\u6D6E\u7A97\u89C6\u89C9\u7B80\u5316\uFF0C\u53BB\u9664\u591A\u4F59\u9634\u5F71"), /*#__PURE__*/React.createElement("li", null, "4 \u79CD\u8F93\u51FA\u98CE\u683C\u73B0\u5728\u7528 4 \u79CD\u989C\u8272\u533A\u5206"), /*#__PURE__*/React.createElement("li", null, "\u53CC\u51FB Fn \u5207\u6362\u98CE\u683C\u65F6\uFF0C\u63D0\u793A\u6D6E\u7A97\u7684\u989C\u8272\u4E0E\u76EE\u6807\u98CE\u683C\u4E00\u81F4")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
