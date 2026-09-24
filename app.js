@@ -229,7 +229,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "macOS \xB7 v1.3.0"))), /*#__PURE__*/React.createElement("div", {
+}, "macOS \xB7 v1.3.1"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u6309\u4F4F\u8BF4\u8BDD\uFF0C\u677E\u5F00\u8F93\u5165\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -305,6 +305,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.09.24"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "VoiceBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.3.1")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "\u677E\u5F00\u5FEB\u6377\u952E\u540E\u7EE7\u7EED\u6536\u97F3\u7EA6 0.3 \u79D2\uFF0C\u5C3E\u5B57\u4E0D\u518D\u88AB\u622A\u65AD"), /*#__PURE__*/React.createElement("li", null, "\u65B0\u589E\u9690\u79C1\u8BF4\u660E\u9875\uFF0C\u6570\u636E\u53BB\u5411\u4E00\u76EE\u4E86\u7136"), /*#__PURE__*/React.createElement("li", null, "\u6743\u9650\u8BF4\u660E\u5982\u5B9E\u6807\u6CE8 Apple \u8BED\u97F3\u8BC6\u522B\u7684\u6570\u636E\u5904\u7406\u65B9\u5F0F")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
