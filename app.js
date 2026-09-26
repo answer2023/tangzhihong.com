@@ -399,7 +399,7 @@ const About = () => /*#__PURE__*/React.createElement("section", {
 }, "\u5173\u4E8E"), /*#__PURE__*/React.createElement("h2", null, "\u81EA\u5DF1\u9700\u8981\u7684\u4E1C\u897F\uFF0C", /*#__PURE__*/React.createElement("br", null), "\u81EA\u5DF1\u9020\u3002")), /*#__PURE__*/React.createElement("div", {
   className: "about-strip-aside"
 }, /*#__PURE__*/React.createElement("p", null, "\u7528\u4E86\u5F88\u4E45\u7684\u65E5\u8BB0 App \u4E0D\u518D\u7EF4\u62A4\uFF0C\u5361\u987F\u5230\u6253\u4E0D\u5F00 \u2014 \u81EA\u5DF1\u9020\u4E86\u4E00\u4E2A\u3002"), /*#__PURE__*/React.createElement("p", null, "\u8DDF AI \u5BF9\u8BDD\u5168\u9760\u6253\u5B57\uFF0C\u6548\u7387\u592A\u4F4E\uFF0C\u73B0\u6709\u8BED\u97F3\u8F93\u5165\u6CD5\u53C8\u4E0D\u4FE1\u4EFB \u2014 \u53C8\u9020\u4E86\u4E00\u4E2A\u3002"), /*#__PURE__*/React.createElement("p", null, "\u6211\u7ED9\u81EA\u5DF1\u7684\u5B9A\u4F4D\u4ECE\u6765\u4E0D\u662F\u7A0B\u5E8F\u5458\uFF0C\u800C\u662F\u4EA7\u54C1\u7ECF\u7406\u3002AI \u662F\u6211\u7684\u642D\u6863\u3002"), /*#__PURE__*/React.createElement("a", {
-  href: "blog/hello-world.html",
+  href: "blog/why-i-build.html",
   className: "link-arrow"
 }, "\u6211\u7684\u6545\u4E8B ", /*#__PURE__*/React.createElement(Icon, {
   name: "arrow-right",
