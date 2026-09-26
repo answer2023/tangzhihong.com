@@ -450,6 +450,16 @@ const Blog = () => /*#__PURE__*/React.createElement("section", {
 }, "\u4E0D\u5B9A\u671F\u66F4\u65B0\uFF0C\u5199\u70B9\u60F3\u6CD5\u548C\u8FC7\u7A0B\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "blog-list"
 }, /*#__PURE__*/React.createElement("a", {
+  href: "blog/calligraphy-aesthetics.html",
+  className: "blog-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "blog-row-date"
+}, "2026.09.26"), /*#__PURE__*/React.createElement("h3", null, "\u6D45\u8C08\u4E66\u6CD5\u5BA1\u7F8E"), /*#__PURE__*/React.createElement("span", {
+  className: "blog-row-arrow"
+}, /*#__PURE__*/React.createElement(Icon, {
+  name: "arrow-right",
+  size: 16
+}))), /*#__PURE__*/React.createElement("a", {
   href: "blog/why-i-build.html",
   className: "blog-row"
 }, /*#__PURE__*/React.createElement("div", {
