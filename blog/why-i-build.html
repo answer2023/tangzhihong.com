@@ -7,39 +7,97 @@
     <meta name="description" content="一个非计算机专业的人,如何用 AI 做出三个产品——JotBee、VoiceBee 与基金诊断的完整故事。">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
-               background: #f5f5f7; color: #1d1d1f; line-height: 1.85; -webkit-font-smoothing: antialiased; }
-        .topbar { background: #1d1d1f; padding: 14px 24px; }
-        .topbar-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; gap: 10px; }
-        .topbar a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
-        .topbar img { width: 22px; height: 22px; border-radius: 6px; }
-        .topbar .crumb { color: rgba(255,255,255,.55); font-size: 14px; font-weight: 400; }
-        article { max-width: 680px; margin: 0 auto; padding: 56px 24px 80px; }
-        h1 { font-size: 34px; line-height: 1.3; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 14px; }
-        .meta { color: rgba(0,0,0,.48); font-size: 14px; margin-bottom: 8px; }
-        h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 44px 0 16px; }
-        p { margin: 0 0 20px; font-size: 17px; color: rgba(0,0,0,.82); }
-        strong { color: #1d1d1f; }
-        a { color: #0071e3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        hr { border: none; border-top: 1px solid rgba(0,0,0,.08); margin: 40px auto; width: 64px; }
-        ul { margin: 0 0 20px 22px; }
-        li { font-size: 17px; color: rgba(0,0,0,.82); margin-bottom: 8px; }
-        .backfoot { max-width: 680px; margin: 0 auto; padding: 0 24px 64px; font-size: 15px; }
+        /* ===== Article (reads on top of ../styles.css tokens) ===== */
+        body { background: var(--bg-white) }
+
+        .post-hero {
+            max-width: 736px; margin: 0 auto;
+            padding: 96px 24px 56px;
+        }
+        .post-hero .headline-hero { font-size: clamp(40px, 6vw, 64px); line-height: 1.1 }
+        .post-lede {
+            font-family: var(--font-display);
+            font-size: clamp(19px, 2vw, 24px);
+            line-height: 1.55; font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 28px;
+        }
+        .post-meta {
+            margin-top: 32px; padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            font-family: var(--font-mono); font-size: 13px;
+            color: var(--text-tertiary);
+            display: flex; gap: 16px;
+        }
+
+        .post-body {
+            max-width: 736px; margin: 0 auto;
+            padding: 0 24px 120px;
+            font-size: 18px; line-height: 1.8; letter-spacing: 0;
+            color: var(--text-secondary);
+        }
+        .post-body p { margin: 0 0 22px }
+        .post-body strong { color: var(--text-primary); font-weight: 600 }
+        .post-body a { color: var(--link-light) }
+        .post-body a:hover { text-decoration: underline }
+        .post-body h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.4vw, 36px);
+            font-weight: 600; line-height: 1.2; letter-spacing: -0.015em;
+            color: var(--text-primary);
+            margin: 96px 0 28px;
+        }
+        .post-body h3 {
+            font-family: var(--font-display);
+            font-size: clamp(22px, 2.4vw, 26px);
+            font-weight: 600; line-height: 1.3; letter-spacing: -0.01em;
+            color: var(--text-primary);
+            margin: 64px 0 20px;
+        }
+        .post-body h2 + h3 { margin-top: 0 }
+        .post-body ul, .post-body ol { margin: 0 0 28px; padding-left: 1.4em }
+        .post-body li { margin-bottom: 12px; padding-left: 4px }
+        .post-body li::marker { color: var(--text-tertiary) }
+        .post-body ol li::marker { font-family: var(--font-mono); font-size: 15px }
+        .post-body hr { display: none }
+
+        .post-foot {
+            background: var(--bg-light);
+            padding: 48px 24px;
+        }
+        .post-foot-inner {
+            max-width: 688px; margin: 0 auto;
+            display: flex; gap: 32px; flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+            .post-hero { padding-top: 64px; padding-bottom: 40px }
+            .post-body { font-size: 17px }
+            .post-body h2 { margin-top: 72px }
+        }
     </style>
 </head>
 <body>
-    <div class="topbar"><div class="topbar-inner">
-        <a href="../index.html"><img src="../assets/favicon.png" alt="">ClearSky</a>
-        <span class="crumb">/ 博客</span>
-    </div></div>
-    <article>
-        <h1>不会写代码的人,为什么做出了三个产品</h1>
-<p class="meta">ClearSky · 初稿写于 2026 年 4 月,发布前更新于 7 月</p>
-<hr>
-<p>我不是程序员。</p>
+    <nav class="nav"><div class="nav-inner">
+        <a href="../index.html" class="nav-logo"><span class="nav-logo-mark"></span>ClearSky</a>
+        <div class="nav-links">
+            <a href="../index.html#products">产品</a>
+            <a href="../index.html#updates">更新</a>
+            <a href="../index.html#about">关于</a>
+            <a href="./">Blog</a>
+        </div>
+    </div></nav>
+
+    <header class="post-hero">
+        <div class="eyebrow">Blog</div>
+        <h1 class="headline-hero">不会写代码的人,为什么做出了三个产品</h1>
+        <p class="post-lede">我不是程序员。</p>
+        <div class="post-meta"><span>ClearSky · 初稿写于 2026 年 4 月,发布前更新于 7 月</span></div>
+    </header>
+
+    <article class="post-body">
 <p>在写下这句话之前,我犹豫了一下——怕别人觉得我在卖惨,或者在铺垫什么逆袭故事。但事实就是事实:我是一名普通的保险公司员工,日常工作是管团队、写材料、做培训、组织活动。计算机专业?跟我没关系。写代码?2023 年学了两个月 Python,没坚持下来。</p>
 <p>然后到了 2026 年,我做了三个产品:两个上了 App Store,一个在网页上跑着。还搭了你正在看的这个网站。</p>
 <p>这篇文章不是教程,也不是炫耀。我想聊聊这件事到底是怎么发生的——一个保险行业的人,为什么会走到这一步。</p>
@@ -133,6 +191,10 @@
 <p>如果你也想做点什么——开始吧。不需要准备好,不需要会写代码。你只需要知道自己要什么。</p>
 <p>— ClearSky</p>
     </article>
-    <div class="backfoot"><a href="./">← 全部文章</a> · <a href="../index.html">回到主页</a></div>
+
+    <footer class="post-foot"><div class="post-foot-inner">
+        <a href="./" class="link-arrow">← 全部文章</a>
+        <a href="../index.html" class="link-arrow">回到主页</a>
+    </div></footer>
 </body>
 </html>
