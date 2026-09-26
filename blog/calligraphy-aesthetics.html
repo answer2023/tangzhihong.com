@@ -103,6 +103,18 @@
 
         .post-note { font-size: 14px; color: var(--text-tertiary) }
 
+        /* 注释 */
+        .post-body sup.fn { font-size: 12px; line-height: 0; margin-left: 1px }
+        .post-body sup.fn a { color: var(--link-light); font-family: var(--font-mono); padding: 0 2px }
+        .post-body sup.fn a:hover { text-decoration: underline }
+        .footnotes { margin-top: 64px; padding-top: 8px; border-top: 1px solid var(--border-light) }
+        .post-body .footnotes h2 { font-size: 21px; margin: 32px 0 20px }
+        .footnotes ol { font-size: 15px; line-height: 1.75; color: var(--text-secondary) }
+        .footnotes li { margin-bottom: 14px; scroll-margin-top: 72px; border-radius: 6px; transition: background .3s }
+        .footnotes li:target { background: var(--accent-soft) }
+        .post-body sup.fn a { scroll-margin-top: 72px }
+        .fn-back { color: var(--link-light); margin-left: 4px }
+
         .post-foot {
             background: var(--bg-light);
             padding: 48px 24px;
@@ -140,11 +152,11 @@
     <article class="post-body">
 <h2>一、各体共通的衡量标准</h2>
 <p>无论楷、行、草、隶、篆，评家通常从这五层看：</p>
-<p class="point"><strong>1. 用笔（笔法）</strong>中锋为主、八面出锋；起收交代清楚；提按、转折、疾徐有节奏。赵孟頫说“用笔千古不易”，指的就是这一层：线质要有骨力、有弹性，不能扁平、漂浮、僵硬。</p>
+<p class="point"><strong>1. 用笔（笔法）</strong>中锋为主、八面出锋；起收交代清楚；提按、转折、疾徐有节奏。赵孟頫说“用笔千古不易”<sup class="fn"><a href="#fn1" id="fnref1">1</a></sup>，指的就是这一层：线质要有骨力、有弹性，不能扁平、漂浮、僵硬。</p>
 <p class="point"><strong>2. 结体（字法）</strong>单字内部的空间分配：主次、疏密、欹正、向背。好字不是“摆正”，而是重心稳而内部有张力。</p>
 <p class="point"><strong>3. 章法（篇法）</strong>字与字、行与行、边款与正文的关系。计白当黑：空白也是结构。一篇字要有呼吸，不能挤成一团，也不能散成一盘沙。</p>
 <p class="point"><strong>4. 墨法</strong>枯湿浓淡、涨墨飞白。墨不是涂黑，是表现速度、力度和情绪的材料。一味浓黑或一味干枯，都偏。</p>
-<p class="point"><strong>5. 气韵 / 神采</strong>最高一层。笔法再精，若没有贯气、没有性情，只是匠活。孙过庭《书谱》所谓“达其情性，形其哀乐”，王僧虔《笔意赞》讲“神采为上，形质次之”。</p>
+<p class="point"><strong>5. 气韵 / 神采</strong>最高一层。笔法再精，若没有贯气、没有性情，只是匠活。孙过庭《书谱》所谓“达其情性，形其哀乐”<sup class="fn"><a href="#fn2" id="fnref2">2</a></sup>，王僧虔《笔意赞》讲“神采为上，形质次之”<sup class="fn"><a href="#fn3" id="fnref3">3</a></sup>。</p>
 <p>另外还有一组对立统一，几乎所有书论都绕不开：</p>
 <div class="table-tile"><table>
 <thead><tr><th>范畴</th><th>过则病</th><th>不及则病</th></tr></thead>
@@ -164,8 +176,8 @@
 <p><strong>核心标准</strong></p>
 <ul>
 <li><strong>法度完备</strong>：永字八法（侧、勒、努、趯、策、掠、啄、磔）交代清楚，起收、转折可复盘。</li>
-<li><strong>结构严谨</strong>：欧阳询三十六法一类原则——排叠、避就、顶戴、穿插、向背、偏侧、补空。中宫收紧、四面开张，是唐楷常见的“紧结”美。</li>
-<li><strong>平正中见险绝</strong>：孙过庭说“初学分布，但求平正；既知平正，务追险绝；既能险绝，复归平正”。一流楷书不是印刷体，是“看起来正、拆开却有斜势”。</li>
+<li><strong>结构严谨</strong>：欧阳询三十六法<sup class="fn"><a href="#fn4" id="fnref4">4</a></sup>一类原则——排叠、避就、顶戴、穿插、向背、偏侧、补空。中宫收紧、四面开张，是唐楷常见的“紧结”美。</li>
+<li><strong>平正中见险绝</strong>：孙过庭说“初学分布，但求平正；既知平正，务追险绝；既能险绝，复归平正”<sup class="fn"><a href="#fn5" id="fnref5">5</a></sup>。一流楷书不是印刷体，是“看起来正、拆开却有斜势”。</li>
 <li><strong>静气</strong>：楷如立。要端庄、沉着，不能抖、不能描、不能“做姿态”。</li>
 </ul>
 <p><strong>分派差异（同是楷，标准不同）</strong></p>
@@ -176,7 +188,7 @@
 <li><strong>赵体</strong>（赵孟頫）：圆润流美，评的是姿媚与贯通，忌“软媚无骨”。</li>
 <li><strong>魏碑</strong>：方峻、刀意、拙朴，评的是金石气，忌故意残破、装苍老。</li>
 </ul>
-<p class="point"><strong>楷书常见病</strong>描字、平拖、结构如算子（字字如算盘珠），“状如算子”即被王羲之《题卫夫人笔阵图后》明确批评；还有“墨猪”（肉多骨少）、“枯骨”（有骨无肉）。</p>
+<p class="point"><strong>楷书常见病</strong>描字、平拖、结构如算子（字字如算盘珠），“状如算子”即被王羲之《题卫夫人笔阵图后》明确批评<sup class="fn"><a href="#fn6" id="fnref6">6</a></sup>；还有“墨猪”<sup class="fn"><a href="#fn7" id="fnref7">7</a></sup>（肉多骨少）、“枯骨”（有骨无肉）。</p>
 
 <h3>行书：楷之流动，草之收敛</h3>
 <p>行书是日常书写的审美高峰，难在“又认得出、又有节奏”。</p>
@@ -200,7 +212,7 @@
 <p>草书最容易被误解成“写得狂就是草”。真正的草，法度往往比楷更严，只是藏在运动里。</p>
 <p><strong>核心标准</strong></p>
 <ul>
-<li><strong>使转</strong>：孙过庭说“真以点画为形质，使转为情性；草以点画为情性，使转为形质”。楷靠点画造型，草靠圆转、翻折造型。不会使转，就只是快楷，不是草。</li>
+<li><strong>使转</strong>：孙过庭说“真以点画为形质，使转为情性；草以点画为情性，使转为形质”<sup class="fn"><a href="#fn8" id="fnref8">8</a></sup>。楷靠点画造型，草靠圆转、翻折造型。不会使转，就只是快楷，不是草。</li>
 <li><strong>符号系统</strong>：草有草法。哪些字可连、哪些部件可省，是约定。杜撰符号，叫“臆造”，不是创造。</li>
 <li><strong>一笔书与呼吸</strong>：张芝、王献之以降，追求气脉不断，但不是真的一笔到底。要有“留”——换气、换锋、换势。</li>
 <li><strong>速度的真实性</strong>：草的飞白、枯笔应是速度与压力的自然结果，不能描出飞白来装动感。</li>
@@ -229,7 +241,7 @@
 <li><strong>中锋圆笔</strong>：线如玉箸、铁线，要匀而有韧性，不是圆规画的铁丝。</li>
 <li><strong>对称与装饰的分寸</strong>：小篆尚对称、尚秩序；太过图案化则近美术字。</li>
 <li><strong>古意</strong>：大篆、金文评的是铸刻感、拙厚、字法来源是否有据。臆造古文，是硬伤。</li>
-<li><strong>邓石如以降</strong>：魏锡曾评其“书从印入，印从书出”，线质可以更有书写的起伏，但仍以圆厚为上。</li>
+<li><strong>邓石如以降</strong>：魏锡曾评其“书从印入，印从书出”<sup class="fn"><a href="#fn9" id="fnref9">9</a></sup>，线质可以更有书写的起伏，但仍以圆厚为上。</li>
 </ul>
 
 <h2>三、一张对照表</h2>
@@ -249,10 +261,10 @@
 <h2>四、品评时真正老到的看法</h2>
 <p>书论里还有几条“跨书体”的高级标准，用来区分能品、妙品、神品：</p>
 <ol>
-<li class="point"><strong>骨力为先</strong>蔡邕《九势》：“下笔用力，肌肤之丽。”先有骨，才谈姿媚。赵孟頫再漂亮，争议也常在“骨力是否够”。</li>
-<li class="point"><strong>中和</strong>孙过庭推崇王羲之，正在“不激不厉，而风规自远”。狂可以，但要能收；秀可以，但要能挺。</li>
-<li class="point"><strong>生熟</strong>熟能生巧，巧过则俗。傅山讲“宁拙毋巧，宁丑毋媚”，刘熙载《艺概》说“丑到极处，便是美到极处”——不是真写丑，是反对甜熟。</li>
-<li class="point"><strong>书卷气 vs 匠气</strong>同样技法，有学养的字有“味”，只练手的字有“油”。苏轼说“诗不求工字不奇，天真烂漫是吾师”，指向的是这一层。</li>
+<li class="point"><strong>骨力为先</strong>蔡邕《九势》：“下笔用力，肌肤之丽。”<sup class="fn"><a href="#fn10" id="fnref10">10</a></sup>先有骨，才谈姿媚。赵孟頫再漂亮，争议也常在“骨力是否够”。</li>
+<li class="point"><strong>中和</strong>孙过庭推崇王羲之，正在“不激不厉，而风规自远”<sup class="fn"><a href="#fn11" id="fnref11">11</a></sup>。狂可以，但要能收；秀可以，但要能挺。</li>
+<li class="point"><strong>生熟</strong>熟能生巧，巧过则俗。傅山讲“宁拙毋巧，宁丑毋媚”，刘熙载《艺概》说“丑到极处，便是美到极处”<sup class="fn"><a href="#fn12" id="fnref12">12</a></sup>——不是真写丑，是反对甜熟。</li>
+<li class="point"><strong>书卷气 vs 匠气</strong>同样技法，有学养的字有“味”，只练手的字有“油”。苏轼说“诗不求工字不奇，天真烂漫是吾师”<sup class="fn"><a href="#fn13" id="fnref13">13</a></sup>，指向的是这一层。</li>
 <li class="point"><strong>时代与个性</strong>阮元、包世臣、康有为把碑学抬起来，是用“金石气、魄力”补帖学末流的媚弱。所以评魏碑不能用唐楷的光洁去卡，评董其昌不能用颜鲁公的雄强去卡。</li>
 </ol>
 
@@ -275,6 +287,25 @@
 <li><strong>篆书</strong>——在圆转里见秩序</li>
 </ul>
 <p class="post-note">以上内容来自AI 输出，仅供参考。</p>
+
+<section class="footnotes">
+<h2>注释</h2>
+<ol>
+<li id="fn1">赵孟頫《兰亭十三跋》：“书法以用笔为上，而结字亦须用工；盖结字因时相传，用笔千古不易。” <a href="#fnref1" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn2">孙过庭《书谱》：“故可达其情性，形其哀乐，验燥湿之殊节，千古依然。” <a href="#fnref2" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn3">南齐王僧虔《笔意赞》：“书之妙道，神采为上，形质次之，兼之者方可绍于古人。”（“神采”一作“神彩”）原稿误作项穆《书法雅言》，已订正。 <a href="#fnref3" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn4">《三十六法》旧附欧阳询名下。清《佩文斋书画谱》按语指出篇中有“高宗书法”“东坡先生”等语，“必非唐人所撰”，一般视为宋以后人托名。 <a href="#fnref4" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn5">孙过庭《书谱》：“至如初学分布，但求平正；既知平正，务追险绝；既能险绝，复归平正。” <a href="#fnref5" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn6">《题卫夫人笔阵图后》：“若平直相似，状如算子，上下方整，前后平直，便不是书，但得其点画耳。”此文旧题王羲之作，一般认为系后人托名。 <a href="#fnref6" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn7">传卫夫人《笔阵图》：“多肉微骨者谓之墨猪。”《笔阵图》作者亦有争议。 <a href="#fnref7" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn8">孙过庭《书谱》：“真以点画为形质，使转为情性；草以点画为情性，使转为形质。草乖使转，不能成字。” <a href="#fnref8" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn9">清魏锡曾跋《吴让之印谱》：“完白书从印入，印从书出。”（完白即邓石如）原稿作邓石如自述，已订正。此条据转引文献，未核原书。 <a href="#fnref9" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn10">旧题东汉蔡邕《九势》：“藏头护尾，力在字中，下笔用力，肌肤之丽。”此文最早见于南宋陈思《书苑菁华》，今人多认为系后人伪托。 <a href="#fnref10" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn11">孙过庭《书谱》论王羲之：“当缘思虑通审，志气和平，不激不厉，而风规自远。” <a href="#fnref11" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn12">傅山《作字示儿孙》：“宁拙毋巧，宁丑毋媚，宁支离毋轻滑，宁真率毋安排。”刘熙载《艺概·书概》：“怪石以丑为美，丑到极处，便是美到极处。”原稿将“宁拙毋巧”归于刘熙载，并引“丑中见妍”（《艺概》中未见），已订正。 <a href="#fnref12" class="fn-back" aria-label="返回正文">↩</a></li>
+<li id="fn13">此句未见于苏轼本集，出自明代董其昌《画禅室随笔》的转述：“‘诗不求工字不奇，天真烂漫是吾师。’东坡先生语也。” <a href="#fnref13" class="fn-back" aria-label="返回正文">↩</a></li>
+</ol>
+</section>
     </article>
 
     <footer class="post-foot"><div class="post-foot-inner">
