@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅谈书法审美 · ClearSky</title>
+    <meta name="description" content="书法的审美不是“好看不好看”一句话能说完：从用笔、结体、章法、墨法到气韵，再到楷行草隶篆各自的尺度。">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* ===== Article (reads on top of ../styles.css tokens) ===== */
+        body { background: var(--bg-white) }
+
+        .post-hero {
+            max-width: 736px; margin: 0 auto;
+            padding: 96px 24px 56px;
+        }
+        .post-hero .headline-hero { font-size: clamp(40px, 6vw, 64px); line-height: 1.1 }
+        .post-lede {
+            font-family: var(--font-display);
+            font-size: clamp(19px, 2vw, 24px);
+            line-height: 1.55; font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 28px;
+        }
+        .post-meta {
+            margin-top: 32px; padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            font-family: var(--font-mono); font-size: 13px;
+            color: var(--text-tertiary);
+            display: flex; gap: 16px;
+        }
+
+        .post-body {
+            max-width: 736px; margin: 0 auto;
+            padding: 0 24px 120px;
+            font-size: 18px; line-height: 1.8; letter-spacing: 0;
+            color: var(--text-secondary);
+        }
+        .post-body p { margin: 0 0 22px }
+        .post-body strong { color: var(--text-primary); font-weight: 600 }
+        .post-body h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.4vw, 36px);
+            font-weight: 600; line-height: 1.2; letter-spacing: -0.015em;
+            color: var(--text-primary);
+            margin: 96px 0 28px;
+        }
+        .post-body h3 {
+            font-family: var(--font-display);
+            font-size: clamp(22px, 2.4vw, 26px);
+            font-weight: 600; line-height: 1.3; letter-spacing: -0.01em;
+            color: var(--text-primary);
+            margin: 64px 0 20px;
+        }
+        .post-body h2 + h3 { margin-top: 0 }
+        .post-body ul, .post-body ol { margin: 0 0 28px; padding-left: 1.4em }
+        .post-body li { margin-bottom: 12px; padding-left: 4px }
+        .post-body li::marker { color: var(--text-tertiary) }
+        .post-body ol li::marker { font-family: var(--font-mono); font-size: 15px }
+        .post-body hr { display: none }
+
+        /* 五层标准：小标题 + 正文 */
+        .post-body .point strong:first-child {
+            display: block; margin-bottom: 4px;
+            font-family: var(--font-display); font-size: 19px;
+        }
+
+        /* 表格：浅灰圆角卡片 */
+        .table-tile {
+            background: var(--bg-light);
+            border-radius: var(--radius-card);
+            padding: 8px 24px;
+            margin: 8px 0 32px;
+            overflow-x: auto; -webkit-overflow-scrolling: touch;
+        }
+        .table-tile table { border-collapse: collapse; width: 100%; font-size: 15px; line-height: 1.6 }
+        .table-tile th, .table-tile td {
+            padding: 14px 16px 14px 0; text-align: left; vertical-align: top;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .table-tile th {
+            font-family: var(--font-display); font-weight: 600; font-size: 13px;
+            letter-spacing: 0.04em; color: var(--text-tertiary); white-space: nowrap;
+        }
+        .table-tile td { color: var(--text-secondary) }
+        .table-tile td:first-child { color: var(--text-primary); font-weight: 600; white-space: nowrap }
+        .table-tile tr:last-child td { border-bottom: none }
+        .table-tile.wide { margin-left: -24px; margin-right: -24px; border-radius: 0 }
+        .table-tile.wide table { min-width: 760px }
+        @media (min-width: 900px) {
+            .table-tile.wide { margin-left: -120px; margin-right: -120px; border-radius: var(--radius-tile); padding: 16px 32px }
+        }
+
+        /* 结尾「一句话概括各体」 */
+        .post-body .summary { list-style: none; padding: 0; margin: 8px 0 40px; border-top: 1px solid var(--border-light) }
+        .post-body .summary li {
+            margin: 0; padding: 18px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-family: var(--font-display); font-size: 21px; color: var(--text-primary);
+        }
+
+        .post-note { font-size: 14px; color: var(--text-tertiary) }
+
+        .post-foot {
+            background: var(--bg-light);
+            padding: 48px 24px;
+        }
+        .post-foot-inner {
+            max-width: 736px; margin: 0 auto;
+            display: flex; gap: 32px; flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+            .post-hero { padding-top: 64px; padding-bottom: 40px }
+            .post-body { font-size: 17px }
+            .post-body h2 { margin-top: 72px }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner">
+        <a href="../index.html" class="nav-logo"><span class="nav-logo-mark"></span>ClearSky</a>
+        <div class="nav-links">
+            <a href="../index.html#products">产品</a>
+            <a href="../index.html#updates">更新</a>
+            <a href="../index.html#about">关于</a>
+            <a href="./">Blog</a>
+        </div>
+    </div></nav>
+
+    <header class="post-hero">
+        <div class="eyebrow">Blog</div>
+        <h1 class="headline-hero">浅谈书法审美</h1>
+        <p class="post-lede">中国书法的审美，不是“好看不好看”一句话能说完，而是一套从笔法、结构、章法到气息的完整标准。不同书体共用底层原则，但侧重点完全不同。</p>
+        <div class="post-meta"><span>2026.09.26</span><span>ClearSky</span></div>
+    </header>
+
+    <article class="post-body">
+<h2>一、各体共通的衡量标准</h2>
+<p>无论楷、行、草、隶、篆，评家通常从这五层看：</p>
+<p class="point"><strong>1. 用笔（笔法）</strong>中锋为主、八面出锋；起收交代清楚；提按、转折、疾徐有节奏。赵孟頫说“用笔千古不易”，指的就是这一层：线质要有骨力、有弹性，不能扁平、漂浮、僵硬。</p>
+<p class="point"><strong>2. 结体（字法）</strong>单字内部的空间分配：主次、疏密、欹正、向背。好字不是“摆正”，而是重心稳而内部有张力。</p>
+<p class="point"><strong>3. 章法（篇法）</strong>字与字、行与行、边款与正文的关系。计白当黑：空白也是结构。一篇字要有呼吸，不能挤成一团，也不能散成一盘沙。</p>
+<p class="point"><strong>4. 墨法</strong>枯湿浓淡、涨墨飞白。墨不是涂黑，是表现速度、力度和情绪的材料。一味浓黑或一味干枯，都偏。</p>
+<p class="point"><strong>5. 气韵 / 神采</strong>最高一层。笔法再精，若没有贯气、没有性情，只是匠活。孙过庭《书谱》所谓“达其情性，形其哀乐”，项穆《书法雅言》讲“神采为上，形质次之”。</p>
+<p>另外还有一组对立统一，几乎所有书论都绕不开：</p>
+<div class="table-tile"><table>
+<thead><tr><th>范畴</th><th>过则病</th><th>不及则病</th></tr></thead>
+<tbody>
+<tr><td>骨与肉</td><td>枯硬如柴</td><td>臃肿无力</td></tr>
+<tr><td>巧与拙</td><td>甜俗、做作</td><td>荒率、粗野</td></tr>
+<tr><td>法与意</td><td>死守成规</td><td>无法无天</td></tr>
+<tr><td>静与动</td><td>板滞</td><td>轻佻</td></tr>
+<tr><td>收与放</td><td>拘谨</td><td>散乱</td></tr>
+</tbody>
+</table></div>
+
+<h2>二、分书体的审美尺度</h2>
+
+<h3>楷书：法度之极，以“正”见神</h3>
+<p>楷书是审美的“度量衡”。先看能不能立住，再看有没有味道。</p>
+<p><strong>核心标准</strong></p>
+<ul>
+<li><strong>法度完备</strong>：永字八法（侧、勒、努、趯、策、掠、啄、磔）交代清楚，起收、转折可复盘。</li>
+<li><strong>结构严谨</strong>：欧阳询三十六法一类原则——排叠、避就、顶戴、穿插、向背、偏侧、补空。中宫收紧、四面开张，是唐楷常见的“紧结”美。</li>
+<li><strong>平正中见险绝</strong>：孙过庭说“初学分布，但求平正；既知平正，务追险绝；既能险绝，复归平正”。一流楷书不是印刷体，是“看起来正、拆开却有斜势”。</li>
+<li><strong>静气</strong>：楷如立。要端庄、沉着，不能抖、不能描、不能“做姿态”。</li>
+</ul>
+<p><strong>分派差异（同是楷，标准不同）</strong></p>
+<ul>
+<li><strong>欧体</strong>（欧阳询）：险劲、法度极严，评的是骨力和精确。</li>
+<li><strong>颜体</strong>（颜真卿）：宽博、雄强，评的是朴厚和庙堂气。</li>
+<li><strong>柳体</strong>（柳公权）：骨力外露，评的是清劲，忌“瘦而枯”。</li>
+<li><strong>赵体</strong>（赵孟頫）：圆润流美，评的是姿媚与贯通，忌“软媚无骨”。</li>
+<li><strong>魏碑</strong>：方峻、刀意、拙朴，评的是金石气，忌故意残破、装苍老。</li>
+</ul>
+<p class="point"><strong>楷书常见病</strong>描字、平拖、结构如算子（字字如算盘珠）、状如算子被王羲之《题卫夫人笔阵图后》明确批评；还有“墨猪”（肉多骨少）、“枯骨”（有骨无肉）。</p>
+
+<h3>行书：楷之流动，草之收敛</h3>
+<p>行书是日常书写的审美高峰，难在“又认得出、又有节奏”。</p>
+<p><strong>核心标准</strong></p>
+<ul>
+<li><strong>笔断意连</strong>：表面可断开，势必须连。上一字的收笔，要成为下一字的起势。</li>
+<li><strong>节奏</strong>：行书之美几乎就是节奏之美——快慢、轻重、疏密交替。一味快是油滑，一味慢是做行书。</li>
+<li><strong>欹侧取势</strong>：单字可倾，行气要正。像走路：身体可摇，方向要稳。</li>
+<li><strong>映带与牵丝</strong>：牵丝是结果不是目的。为连而连，俗。</li>
+<li><strong>可读性</strong>：行书再放，仍应可识。完全不可读，就越界到草了。</li>
+</ul>
+<p><strong>经典标尺</strong></p>
+<ul>
+<li>王羲之《兰亭序》：遒媚劲健、变化自然，是“中和”的极致。</li>
+<li>颜真卿《祭侄文稿》：情感驱动，渴笔、涂改都成章法，评的是真挚与苍茫。</li>
+<li>苏轼、米芾：前者丰腴而韵胜，后者刷字、侧锋取势，评的是个性是否能压住法度。</li>
+</ul>
+<p class="point"><strong>行书常见病</strong>油滑（笔画圆熟无骨）、描连（硬加牵丝）、行气断裂、楷行混杂却无过渡、抖笔装韵。</p>
+
+<h3>草书：以意为先，以使转为骨</h3>
+<p>草书最容易被误解成“写得狂就是草”。真正的草，法度往往比楷更严，只是藏在运动里。</p>
+<p><strong>核心标准</strong></p>
+<ul>
+<li><strong>使转</strong>：孙过庭说“真以点画为形质，使转为情性；草以点画为情性，使转为形质”。楷靠点画造型，草靠圆转、翻折造型。不会使转，就只是快楷，不是草。</li>
+<li><strong>符号系统</strong>：草有草法。哪些字可连、哪些部件可省，是约定。杜撰符号，叫“臆造”，不是创造。</li>
+<li><strong>一笔书与呼吸</strong>：张芝、王献之以降，追求气脉不断，但不是真的一笔到底。要有“留”——换气、换锋、换势。</li>
+<li><strong>速度的真实性</strong>：草的飞白、枯笔应是速度与压力的自然结果，不能描出飞白来装动感。</li>
+<li><strong>可识与不可识的平衡</strong>：今草、小草仍应可寻字源；狂草可以更抽象，但专家应能据草法还原。完全不可还原，是乱书。</li>
+</ul>
+<p><strong>小草 / 今草 vs 狂草</strong></p>
+<ul>
+<li><strong>小草、今草</strong>（王羲之《十七帖》、孙过庭《书谱》）：简而有法，评的是精微、贯气、不狂而韵。</li>
+<li><strong>大草、狂草</strong>（张旭、怀素）：评的是气势、空间开合、情绪浓度。怀素《自叙帖》的瘦劲圆转，张旭的肥厚奔放，标准不同，但都要“狂而不乱”。</li>
+<li><strong>章草</strong>：保留隶意（波磔、横势），字字独立。评的是古质，忌写成今草再硬加雁尾。</li>
+</ul>
+<p class="point"><strong>草书常见病</strong>绕圈、春蚓秋蛇（ encircling 而无骨）、任笔为体、聚墨成形、情绪宣泄而无草法、行气如绳（一味缠绕）。</p>
+
+<h3>隶书：横势与波磔</h3>
+<p><strong>核心标准</strong></p>
+<ul>
+<li><strong>蚕头雁尾、一波三折</strong>：波磔是隶的标志，但一篇之中雁尾不可字字都出，要“雁不双飞”。</li>
+<li><strong>横势</strong>：字取扁方，中宫可宽，左右开张。</li>
+<li><strong>金石气 vs 庙堂气</strong>：汉碑（如《张迁》《曹全》《礼器》）各有朴拙、秀逸、清刚。清人隶书（金农、邓石如、伊秉绶）又加入书写性。</li>
+<li><strong>忌楷化</strong>：把隶写成“扁楷”，波磔做作，是常见俗病。</li>
+</ul>
+
+<h3>篆书：圆转、中锋、秩序</h3>
+<p><strong>核心标准</strong></p>
+<ul>
+<li><strong>中锋圆笔</strong>：线如玉箸、铁线，要匀而有韧性，不是圆规画的铁丝。</li>
+<li><strong>对称与装饰的分寸</strong>：小篆尚对称、尚秩序；太过图案化则近美术字。</li>
+<li><strong>古意</strong>：大篆、金文评的是铸刻感、拙厚、字法来源是否有据。臆造古文，是硬伤。</li>
+<li><strong>邓石如以降</strong>：强调“印从书出、书从印入”，线质可以更有书写的起伏，但仍以圆厚为上。</li>
+</ul>
+
+<h2>三、一张对照表</h2>
+<div class="table-tile wide"><table>
+<thead><tr><th>维度</th><th>楷书</th><th>行书</th><th>草书</th><th>隶书</th><th>篆书</th></tr></thead>
+<tbody>
+<tr><td>体势</td><td>立，纵势为主</td><td>走，纵势中含摆动</td><td>奔，势大于形</td><td>坐，横势</td><td>立或铸，纵势、对称</td></tr>
+<tr><td>速度</td><td>最慢，可复笔</td><td>中速，有加速段</td><td>最快，但有留</td><td>较慢，波磔处顿挫</td><td>稳，少大起大落</td></tr>
+<tr><td>造型关键</td><td>点画完整、结构精确</td><td>映带、欹正、行气</td><td>使转、符号、空间</td><td>波磔、雁尾、扁方</td><td>圆转、均匀、字法</td></tr>
+<tr><td>可读性</td><td>必须清晰</td><td>应可识</td><td>小草可识，狂草可还原</td><td>应可识</td><td>需识篆</td></tr>
+<tr><td>最高赞美</td><td>端庄而有生气</td><td>流美而不滑</td><td>狂而不乱</td><td>古朴而有韵</td><td>浑穆、婉通</td></tr>
+<tr><td>最大忌讳</td><td>板、描、算子</td><td>油、弱、硬连</td><td>乱、绕、无草法</td><td>楷化、雁尾泛滥</td><td>描、软、杜撰字法</td></tr>
+<tr><td>神采来源</td><td>静中之势</td><td>节奏</td><td>气脉与情绪</td><td>拙与波</td><td>古与厚</td></tr>
+</tbody>
+</table></div>
+
+<h2>四、品评时真正老到的看法</h2>
+<p>书论里还有几条“跨书体”的高级标准，用来区分能品、妙品、神品：</p>
+<ol>
+<li class="point"><strong>骨力为先</strong>蔡邕《九势》：“下笔用力，肌肤之丽。”先有骨，才谈姿媚。赵孟頫再漂亮，争议也常在“骨力是否够”。</li>
+<li class="point"><strong>中和</strong>孙过庭推崇王羲之，正在“不激不厉，而风规自远”。狂可以，但要能收；秀可以，但要能挺。</li>
+<li class="point"><strong>生熟</strong>熟能生巧，巧过则俗。刘熙载《艺概》重“丑中见妍”“宁拙毋巧”——不是真写丑，是反对甜熟。</li>
+<li class="point"><strong>书卷气 vs 匠气</strong>同样技法，有学养的字有“味”，只练手的字有“油”。苏轼说“诗不求工字不奇，天真烂漫是吾师”，指向的是这一层。</li>
+<li class="point"><strong>时代与个性</strong>阮元、包世臣、康有为把碑学抬起来，是用“金石气、魄力”补帖学末流的媚弱。所以评魏碑不能用唐楷的光洁去卡，评董其昌不能用颜鲁公的雄强去卡。</li>
+</ol>
+
+<h2>五、实用：你若要自己看一幅字</h2>
+<p>可以按这个顺序，不容易被“热闹”骗：</p>
+<ol>
+<li><strong>远看章法</strong>：整幅气是否贯通，黑白是否呼吸。</li>
+<li><strong>看行气</strong>：尤其行、草，一行是否像有一根看不见的脊。</li>
+<li><strong>近看线质</strong>：是写出来的，还是描出来的；有没有弹性。</li>
+<li><strong>拆单字</strong>：结构是否合理，重心是否可立。</li>
+<li><strong>对书体门规</strong>：楷看法度，行看节奏，草看使转与草法，隶看波磔与古意，篆看字法和圆厚。</li>
+<li><strong>最后才看个性</strong>：没有前五层，个性只是习气。</li>
+</ol>
+<p>一句话概括各体：</p>
+<ul class="summary">
+<li><strong>楷书</strong>——在规矩里见精神</li>
+<li><strong>行书</strong>——在流动里见法度</li>
+<li><strong>草书</strong>——在放纵里见控制</li>
+<li><strong>隶书</strong>——在波磔里见古质</li>
+<li><strong>篆书</strong>——在圆转里见秩序</li>
+</ul>
+<p class="post-note">以上内容来自AI 输出，仅供参考。</p>
+    </article>
+
+    <footer class="post-foot"><div class="post-foot-inner">
+        <a href="./" class="link-arrow">← 全部文章</a>
+        <a href="../index.html" class="link-arrow">回到主页</a>
+    </div></footer>
+</body>
+</html>
