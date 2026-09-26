@@ -7,47 +7,77 @@
     <meta name="description" content="ClearSky 的博客:用 AI 做产品的真实过程、方法论与观察。">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
-               background: #f5f5f7; color: #1d1d1f; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-        .topbar { background: #1d1d1f; padding: 14px 24px; }
-        .topbar-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; gap: 10px; }
-        .topbar a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
-        .topbar img { width: 22px; height: 22px; border-radius: 6px; }
-        .topbar .crumb { color: rgba(255,255,255,.55); font-size: 14px; font-weight: 400; }
-        main { max-width: 680px; margin: 0 auto; padding: 56px 24px 80px; }
-        h1 { font-size: 32px; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 8px; }
-        .sub { color: rgba(0,0,0,.48); font-size: 15px; margin-bottom: 36px; }
-        .post { display: block; background: #fff; border-radius: 14px; padding: 22px 24px; text-decoration: none; color: inherit;
-                box-shadow: 0 1px 2px rgba(0,0,0,.04); transition: transform .15s, box-shadow .15s; }
-        .post:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.08); }
-        .post .date { color: rgba(0,0,0,.48); font-size: 13px; margin-bottom: 6px; }
-        .post h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
-        .post .brief { color: rgba(0,0,0,.62); font-size: 14.5px; margin-top: 8px; }
-        .backfoot { max-width: 680px; margin: 0 auto; padding: 0 24px 64px; font-size: 15px; }
-        .backfoot a { color: #0071e3; text-decoration: none; }
+        /* ===== Blog index (reads on top of ../styles.css .blog-list / .blog-row) ===== */
+        body { background: var(--bg-white) }
+
+        .blog-page {
+            max-width: 880px; margin: 0 auto;
+            padding: 96px 24px 120px;
+        }
+        .blog-page .headline-hero { font-size: clamp(40px, 6vw, 64px); line-height: 1.1 }
+
+        .blog-row { align-items: start }
+        .blog-row-date { padding-top: 5px }
+        .blog-row-brief {
+            margin-top: 8px;
+            font-size: 15px; line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .blog-row-arrow { padding-top: 3px }
+
+        .post-foot {
+            background: var(--bg-light);
+            padding: 48px 24px;
+        }
+        .post-foot-inner { max-width: 832px; margin: 0 auto }
+
+        @media (max-width: 640px) {
+            .blog-page { padding-top: 64px; padding-bottom: 80px }
+            .blog-row-date { padding-top: 0 }
+            .blog-row-arrow { display: none }
+        }
     </style>
 </head>
 <body>
-    <div class="topbar"><div class="topbar-inner">
-        <a href="../index.html"><img src="../assets/favicon.png" alt="">ClearSky</a>
-        <span class="crumb">/ 博客</span>
-    </div></div>
-    <main>
-        <h1>博客</h1>
-        <p class="sub">不定期更新,写点想法和过程。</p>
-        <a class="post" href="calligraphy-aesthetics.html" style="margin-bottom: 16px;">
-            <div class="date">2026.09.26</div>
-            <h2>浅谈书法审美</h2>
-            <p class="brief">书法的审美不是“好看不好看”一句话能说完：从用笔、结体、章法、墨法到气韵，再到楷行草隶篆各自的尺度。</p>
-        </a>
-        <a class="post" href="why-i-build.html">
-            <div class="date">2026.07.20</div>
-            <h2>不会写代码的人,为什么做出了三个产品</h2>
-            <p class="brief">一个非计算机专业的人,如何用 AI 做出 JotBee、VoiceBee 与基金诊断——以及为什么。</p>
-        </a>
+    <nav class="nav"><div class="nav-inner">
+        <a href="../index.html" class="nav-logo"><span class="nav-logo-mark"></span>ClearSky</a>
+        <div class="nav-links">
+            <a href="../index.html#products">产品</a>
+            <a href="../index.html#updates">更新</a>
+            <a href="../index.html#about">关于</a>
+            <a href="./">Blog</a>
+        </div>
+    </div></nav>
+
+    <main class="blog-page">
+        <div class="eyebrow">Blog</div>
+        <h1 class="headline-hero">博客</h1>
+        <p class="subtitle">不定期更新,写点想法和过程。</p>
+
+        <div class="blog-list">
+            <a class="blog-row" href="calligraphy-aesthetics.html">
+                <div class="blog-row-date">2026.09.26</div>
+                <div>
+                    <h3>浅谈书法审美</h3>
+                    <p class="blog-row-brief">书法的审美不是“好看不好看”一句话能说完：从用笔、结体、章法、墨法到气韵，再到楷行草隶篆各自的尺度。</p>
+                </div>
+                <span class="blog-row-arrow">→</span>
+            </a>
+            <a class="blog-row" href="why-i-build.html">
+                <div class="blog-row-date">2026.07.20</div>
+                <div>
+                    <h3>不会写代码的人,为什么做出了三个产品</h3>
+                    <p class="blog-row-brief">一个非计算机专业的人,如何用 AI 做出 JotBee、VoiceBee 与基金诊断——以及为什么。</p>
+                </div>
+                <span class="blog-row-arrow">→</span>
+            </a>
+        </div>
     </main>
-    <div class="backfoot"><a href="../index.html">← 回到主页</a></div>
+
+    <footer class="post-foot"><div class="post-foot-inner">
+        <a href="../index.html" class="link-arrow">← 回到主页</a>
+    </div></footer>
 </body>
 </html>
