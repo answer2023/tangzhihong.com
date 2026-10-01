@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearSky 双语翻译 · Chrome 插件</title>
+    <meta name="description" content="ClearSky 双语翻译：网页双语对照 / 仅显示译文一键切换，YouTube 双语字幕。支持 DeepSeek、通义千问、OpenAI 等大模型，也可零配置免费使用。">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background: var(--bg-white) }
+        :root { --klein: #022A99; --gold: #FBCD08 }
+
+        /* ===== Hero ===== */
+        .tr-hero { max-width: 980px; margin: 0 auto; padding: 96px 24px 64px; text-align: center }
+        .tr-icon { display: block; margin: 0 auto; width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 16px 40px rgba(2,42,153,.25) }
+        .tr-hero .eyebrow { margin-top: 28px }
+        .tr-hero h1 { font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; margin: 10px 0 0 }
+        .tr-hero h1 em { font-style: normal; color: var(--klein) }
+        .tr-lede { font-family: var(--font-display); font-size: clamp(19px, 2.2vw, 24px); line-height: 1.5; color: var(--text-secondary); max-width: 680px; margin: 22px auto 0 }
+        .tr-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px }
+        .tr-status { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: var(--radius-pill); background: var(--klein); color: #fff; font-weight: 600; font-size: 15px }
+        .tr-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(251,205,8,.25) }
+        .tr-ghost { display: inline-flex; align-items: center; padding: 12px 22px; border-radius: var(--radius-pill); border: 1px solid var(--border-light); color: var(--text-primary); font-weight: 600; font-size: 15px; transition: border-color .2s }
+        .tr-ghost:hover { border-color: var(--klein) }
+        .tr-meta { margin-top: 22px; font-family: var(--font-mono); font-size: 13px; color: var(--text-tertiary) }
+
+        /* ===== Feature rows ===== */
+        .tr-feature { max-width: 1120px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center }
+        .tr-feature.flip { grid-template-columns: 7fr 5fr }
+        .tr-feature.flip .tr-copy { order: 2 }
+        .tr-copy .eyebrow { color: var(--klein) }
+        .tr-copy h2 { font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; font-weight: 700; letter-spacing: -0.015em; margin: 10px 0 18px }
+        .tr-copy p { font-size: 17px; line-height: 1.75; color: var(--text-secondary); margin: 0 0 14px }
+        .tr-copy ul { margin: 6px 0 0; padding: 0; list-style: none }
+        .tr-copy li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 16px; line-height: 1.6; color: var(--text-secondary) }
+        .tr-copy li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 2px; background: var(--gold) }
+        .tr-shot { border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid var(--border-light); box-shadow: 0 24px 60px rgba(0,0,0,.12) }
+        .tr-shot .bar { height: 30px; background: #eef0f6; display: flex; align-items: center; gap: 7px; padding: 0 12px }
+        .tr-shot .bar i { width: 10px; height: 10px; border-radius: 50%; background: #d0d4df }
+        .tr-shot img { display: block; width: 100% }
+        .tr-band { background: var(--bg-light) }
+
+        /* ===== Privacy & How-to ===== */
+        .tr-cards { max-width: 1120px; margin: 0 auto; padding: 88px 24px; }
+        .tr-cards > h2 { font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 40px); font-weight: 700; letter-spacing: -0.015em; text-align: center; margin: 8px 0 44px }
+        .tr-cards > .eyebrow { text-align: center; color: var(--klein) }
+        .tr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px }
+        .tr-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-card); padding: 30px 28px }
+        .tr-card .num { font-family: var(--font-mono); font-size: 13px; color: var(--klein); font-weight: 600 }
+        .tr-card h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 10px 0 10px }
+        .tr-card p { font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin: 0 }
+        .tr-card code, .tr-copy code { font-family: var(--font-mono); font-size: .9em; background: rgba(2,42,153,.08); color: var(--klein); padding: 1px 6px; border-radius: 5px }
+        .tr-dark { background: #0b1230; color: #fff }
+        .tr-dark .tr-card { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.1) }
+        .tr-dark .tr-card p { color: rgba(255,255,255,.72) }
+        .tr-dark .tr-card .num, .tr-dark > .tr-cards > .eyebrow { color: var(--gold) }
+        .tr-dark .tr-card code { background: rgba(251,205,8,.14); color: var(--gold) }
+
+        /* ===== Changelog ===== */
+        .tr-log { max-width: 736px; margin: 0 auto; padding: 88px 24px 112px }
+        .tr-log h2 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 34px); font-weight: 700; margin: 8px 0 28px }
+        .tr-log .row { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 22px 0; border-top: 1px solid var(--border-light) }
+        .tr-log .date { font-family: var(--font-mono); font-size: 13px; color: var(--text-tertiary); padding-top: 4px }
+        .tr-log h3 { font-size: 18px; margin: 0 0 8px }
+        .tr-log h3 span { font-family: var(--font-mono); font-size: 13px; color: var(--klein); margin-left: 6px }
+        .tr-log ul { margin: 0; padding-left: 1.2em; color: var(--text-secondary); line-height: 1.75 }
+
+        .post-foot { background: var(--bg-light); padding: 48px 24px }
+        .post-foot-inner { max-width: 1120px; margin: 0 auto; display: flex; gap: 32px; flex-wrap: wrap }
+
+        @media (max-width: 860px) {
+            .tr-feature, .tr-feature.flip { grid-template-columns: 1fr; gap: 32px; padding: 56px 24px }
+            .tr-feature.flip .tr-copy { order: 0 }
+            .tr-grid { grid-template-columns: 1fr }
+            .tr-hero { padding-top: 64px }
+            .tr-log .row { grid-template-columns: 1fr; gap: 6px }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner">
+        <a href="../index.html" class="nav-logo"><span class="nav-logo-mark"></span>ClearSky</a>
+        <div class="nav-links">
+            <a href="../index.html#products">产品</a>
+            <a href="../index.html#updates">更新</a>
+            <a href="../index.html#about">关于</a>
+            <a href="../blog/">Blog</a>
+        </div>
+    </div></nav>
+
+    <header class="tr-hero">
+        <img src="icon.png" alt="ClearSky 双语翻译图标" class="tr-icon">
+        <div class="eyebrow">Chrome 插件 · 免费</div>
+        <h1>外文网页、外文视频，<br><em>一个插件读懂。</em></h1>
+        <p class="tr-lede">网页双语对照，或者整页只看中文；YouTube 字幕自动变成中英双语。可以接自己的大模型，也可以什么都不配、装上就用。</p>
+        <div class="tr-actions">
+            <span class="tr-status"><i></i>Chrome 应用商店审核中，即将上架</span>
+            <a class="tr-ghost" href="https://github.com/answer2023/clearsky-translate">查看源代码</a>
+            <a class="tr-ghost" href="https://answer2023.github.io/clearsky-translate/privacy.html">隐私政策</a>
+        </div>
+        <div class="tr-meta">v1.0.1 · 2026.10 · Manifest V3</div>
+    </header>
+
+    <section class="tr-band">
+        <div class="tr-feature">
+            <div class="tr-copy">
+                <div class="eyebrow">网页翻译</div>
+                <h2>原文在上，译文在下。</h2>
+                <p>读研报、看外媒、查资料时，最怕来回切换。双语对照把译文放在每一段原文下面，一眼对照，不丢上下文。</p>
+                <ul>
+                    <li>标题、段落、列表、引用逐段翻译，导航栏逐项翻</li>
+                    <li>只翻你看得到的部分，长页面不卡；后加载的内容自动跟上</li>
+                    <li>代码块、输入框、本来就是中文的段落自动跳过</li>
+                </ul>
+            </div>
+            <div class="tr-shot"><div class="bar"><i></i><i></i><i></i></div><img src="article-bilingual.png" alt="网页双语对照效果" loading="lazy"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="tr-feature flip">
+            <div class="tr-copy">
+                <div class="eyebrow">仅显示译文</div>
+                <h2>一键切换，整页变中文。</h2>
+                <p>不想看原文时，切到「仅显示译文」：页面排版保持原样，链接照常能点，浏览器标签页标题也一并翻译。</p>
+                <ul>
+                    <li>双语 ⇄ 仅译文随时切换，不重复请求，不多花一分钱</li>
+                    <li>快捷键 <code>⌥ A</code>、右键菜单、工具栏图标都能触发</li>
+                    <li>常看的网站可设为「总是翻译」，打开即译</li>
+                </ul>
+            </div>
+            <div class="tr-shot"><div class="bar"><i></i><i></i><i></i></div><img src="article-replace.png" alt="仅显示译文效果" loading="lazy"></div>
+        </div>
+    </section>
+
+    <section class="tr-band">
+        <div class="tr-feature">
+            <div class="tr-copy">
+                <div class="eyebrow">视频双语字幕</div>
+                <h2>打开字幕，就是双语。</h2>
+                <p>在 YouTube 打开视频，插件自动开启字幕并换成中英双语：原文在上，黄色译文在下。</p>
+                <ul>
+                    <li>自动生成的字幕先按句断开再翻，不再一个词一个词地跳</li>
+                    <li>优先翻译当前播放位置，拖动进度条也能马上跟上</li>
+                    <li>字号、颜色、背景可调，也可以只看中文</li>
+                </ul>
+            </div>
+            <div class="tr-shot"><div class="bar"><i></i><i></i><i></i></div><img src="video.png" alt="视频双语字幕效果" loading="lazy"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="tr-feature flip">
+            <div class="tr-copy">
+                <div class="eyebrow">翻译引擎</div>
+                <h2>用你自己的大模型。</h2>
+                <p>零配置时用免费翻译；填上 API Key 后，交给大模型：栏目名会意译，专有名词带书名号，术语更准。</p>
+                <ul>
+                    <li>预设 DeepSeek、通义千问、Kimi、智谱 GLM、OpenAI、OpenRouter</li>
+                    <li>任何 OpenAI 兼容接口都能接</li>
+                    <li>智能模式：大模型出错时自动退回免费翻译，不会卡在半路</li>
+                </ul>
+            </div>
+            <div class="tr-shot"><div class="bar"><i></i><i></i><i></i></div><img src="options.png" alt="设置页：选择翻译引擎" loading="lazy"></div>
+        </div>
+    </section>
+
+    <section class="tr-dark">
+        <div class="tr-cards">
+            <div class="eyebrow">隐私</div>
+            <h2>不常驻，不收集，不上传。</h2>
+            <div class="tr-grid">
+                <div class="tr-card"><div class="num">01</div><h3>按需访问网页</h3><p>插件平时不读取任何网页。只有你点图标、按快捷键或用右键菜单时，才临时访问当前这一个标签页。</p></div>
+                <div class="tr-card"><div class="num">02</div><h3>没有自己的服务器</h3><p>要翻译的文字只发给你选的翻译服务。不收集浏览记录，没有广告，没有统计代码。</p></div>
+                <div class="tr-card"><div class="num">03</div><h3>Key 只在你的电脑上</h3><p>API Key 保存在本机浏览器的 <code>storage.local</code> 里，不同步、不上传，只在调用你选的服务商时使用。</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="tr-cards">
+            <div class="eyebrow">怎么用</div>
+            <h2>三步上手。</h2>
+            <div class="tr-grid">
+                <div class="tr-card"><div class="num">STEP 1</div><h3>安装插件</h3><p>上架后从 Chrome 应用商店一键安装。点工具栏的拼图图标，把 ClearSky 固定出来。</p></div>
+                <div class="tr-card"><div class="num">STEP 2</div><h3>翻译网页</h3><p>点插件图标 →「翻译此页面」，或者按 <code>⌥ A</code>。再按一次恢复原文。</p></div>
+                <div class="tr-card"><div class="num">STEP 3</div><h3>看视频</h3><p>打开任意 YouTube 视频，双语字幕会自动出现。想要更好的译文，在设置页填上大模型 Key。</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tr-band">
+        <div class="tr-log">
+            <div class="eyebrow">版本记录</div>
+            <h2>一直在迭代。</h2>
+            <div class="row"><div class="date">2026.10.01</div><div><h3>ClearSky 双语翻译 <span>v1.0.1</span></h3><ul>
+                <li>权限改为按需申请：不再读取所有网站，只在你操作时访问当前页</li>
+                <li>「总是翻译此网站」改为针对单个网站授权，关闭即归还</li>
+            </ul></div></div>
+            <div class="row"><div class="date">2026.10.01</div><div><h3>ClearSky 双语翻译 <span>v1.0.0</span></h3><ul>
+                <li>网页双语对照 / 仅显示译文，一键切换</li>
+                <li>YouTube 双语字幕，自动字幕按句断开再翻译</li>
+                <li>支持 DeepSeek、通义千问等大模型，未配置时免费翻译兜底</li>
+            </ul></div></div>
+        </div>
+    </section>
+
+    <footer class="post-foot"><div class="post-foot-inner">
+        <a href="../index.html#products" class="link-arrow">← 全部作品</a>
+        <a href="https://github.com/answer2023/clearsky-translate" class="link-arrow">GitHub 源代码</a>
+        <a href="mailto:xtry96@gmail.com" class="link-arrow">反馈与建议</a>
+    </div></footer>
+</body>
+</html>

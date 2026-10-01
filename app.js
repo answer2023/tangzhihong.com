@@ -188,11 +188,35 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "eyebrow"
 }, "\u4F5C\u54C1"), /*#__PURE__*/React.createElement("h2", {
   className: "headline-section"
-}, "\u56DB\u4E2A\u5DE5\u5177\uFF0C\u4E00\u4E2A\u5DE5\u4F5C\u5BA4\u3002"), /*#__PURE__*/React.createElement("p", {
+}, "五个工具，一个工作室。"), /*#__PURE__*/React.createElement("p", {
   className: "subtitle"
 }, "\u4E3A\u81EA\u5DF1\u9020\u7684\u4E1C\u897F\uFF0C\u6700\u540E\u4E5F\u5E2E\u5230\u4E86\u522B\u4EBA\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "products-grid"
 }, /*#__PURE__*/React.createElement("a", {
+  href: "translate/",
+  className: "product-tile product-tile-wide"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-head"
+}, /*#__PURE__*/React.createElement("img", {
+  src: "assets/translate-icon.png",
+  alt: "",
+  className: "product-tile-icon"
+}), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-meta"
+}, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译"), /*#__PURE__*/React.createElement("span", {
+  className: "product-tile-platform"
+}, "Chrome 插件 \xB7 v1.0.1 \xB7 商店审核中"))), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-tagline"
+}, "外文网页、外文视频，一个插件读懂。"), /*#__PURE__*/React.createElement("p", {
+  className: "product-tile-desc"
+}, "网页双语对照或整页只看译文，一键切换；YouTube 字幕自动变成中英双语。可接 DeepSeek、通义千问等大模型，也能零配置免费用。"), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-features"
+}, /*#__PURE__*/React.createElement("span", null, "双语对照"), /*#__PURE__*/React.createElement("span", null, "仅显示译文"), /*#__PURE__*/React.createElement("span", null, "视频双语字幕"), /*#__PURE__*/React.createElement("span", null, "大模型翻译")), /*#__PURE__*/React.createElement("span", {
+  className: "product-tile-cta"
+}, "了解更多 ", /*#__PURE__*/React.createElement(Icon, {
+  name: "arrow-right",
+  size: 14
+}))), /*#__PURE__*/React.createElement("a", {
   href: "https://md.tangzhihong.com/",
   className: "product-tile"
 }, /*#__PURE__*/React.createElement("div", {
@@ -305,6 +329,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.10.01"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译 ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.0.1")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "新作品：Chrome 双语翻译插件，已提交应用商店审核"), /*#__PURE__*/React.createElement("li", null, "网页双语对照 / 仅显示译文一键切换，YouTube 双语字幕"), /*#__PURE__*/React.createElement("li", null, "权限按需申请：只在你操作时访问当前网页")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
@@ -552,7 +586,9 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   href: "https://voicebee.tangzhihong.com/"
 }, "VoiceBee"), /*#__PURE__*/React.createElement("a", {
   href: "https://jotbee.app"
-}, "JotBee")), /*#__PURE__*/React.createElement("div", {
+}, "JotBee"), /*#__PURE__*/React.createElement("a", {
+  href: "translate/"
+}, "双语翻译")), /*#__PURE__*/React.createElement("div", {
   className: "footer-col"
 }, /*#__PURE__*/React.createElement("h4", null, "Resources"), /*#__PURE__*/React.createElement("a", {
   href: "blog/"

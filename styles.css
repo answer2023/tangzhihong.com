@@ -413,6 +413,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none }
     gap: 14px;
     margin-top: 56px;
 }
+.product-tile-wide { grid-column: 1 / -1 }
 .product-tile {
     display: flex; flex-direction: column;
     padding: 40px 36px 36px;
