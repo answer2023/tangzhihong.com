@@ -100,7 +100,7 @@
             <a class="tr-ghost" href="https://github.com/answer2023/clearsky-translate">查看源代码</a>
             <a class="tr-ghost" href="https://answer2023.github.io/clearsky-translate/privacy.html">隐私政策</a>
         </div>
-        <div class="tr-meta">v1.0.1 · 2026.10 · Manifest V3</div>
+        <div class="tr-meta">v1.0.3 · 2026.10 · Manifest V3</div>
     </header>
 
     <section class="tr-band">
@@ -140,11 +140,13 @@
             <div class="tr-copy">
                 <div class="eyebrow">视频双语字幕</div>
                 <h2>打开字幕，就是双语。</h2>
-                <p>在 YouTube 打开视频，插件自动开启字幕并换成中英双语：原文在上，黄色译文在下。</p>
+                <p>在 YouTube 打开视频，插件自动开启字幕并换成中英双语：原文在上，黄色译文在下。直播也能用。</p>
                 <ul>
                     <li>自动生成的字幕先按句断开再翻，不再一个词一个词地跳</li>
                     <li>优先翻译当前播放位置，拖动进度条也能马上跟上</li>
-                    <li>字号、颜色、背景可调，也可以只看中文</li>
+                    <li>直播边播边翻：实时读取直播字幕，一句话说完就出译文</li>
+                    <li>原文、译文字号分开调；全屏时字幕不突然变大</li>
+                    <li>视频本身没有字幕时会提示你，不用干等</li>
                 </ul>
             </div>
             <div class="tr-shot"><div class="bar"><i></i><i></i><i></i></div><img src="video.png" alt="视频双语字幕效果" loading="lazy"></div>
@@ -156,11 +158,11 @@
             <div class="tr-copy">
                 <div class="eyebrow">翻译引擎</div>
                 <h2>用你自己的大模型。</h2>
-                <p>零配置时用免费翻译；填上 API Key 后，交给大模型：栏目名会意译，专有名词带书名号，术语更准。</p>
+                <p>零配置就能用：微软、谷歌两个免费翻译引擎互为备份，国内通常不用代理。填上 API Key 后交给大模型：栏目名会意译，专有名词带书名号，术语更准。</p>
                 <ul>
                     <li>预设 DeepSeek、通义千问、Kimi、智谱 GLM、OpenAI、OpenRouter</li>
                     <li>任何 OpenAI 兼容接口都能接</li>
-                    <li>智能模式：大模型出错时自动退回免费翻译，不会卡在半路</li>
+                    <li>智能模式：大模型出错自动退回免费翻译，免费翻译也会自动换引擎，不会卡在半路</li>
                 </ul>
             </div>
             <div class="tr-shot"><div class="bar"><i></i><i></i><i></i></div><img src="options.png" alt="设置页：选择翻译引擎" loading="lazy"></div>
@@ -195,6 +197,15 @@
         <div class="tr-log">
             <div class="eyebrow">版本记录</div>
             <h2>一直在迭代。</h2>
+            <div class="row"><div class="date">2026.10.02</div><div><h3>ClearSky 双语翻译 <span>v1.0.3</span></h3><ul>
+                <li>新增微软免费翻译（默认首选），与谷歌翻译互为备份，国内通常无需代理</li>
+                <li>支持 YouTube 直播双语字幕</li>
+                <li>原文、译文字号可分开调节；全屏时字幕默认不放大</li>
+                <li>视频没有字幕时给出提示；插件更新后提示刷新页面</li>
+            </ul></div></div>
+            <div class="row"><div class="date">2026.10.01</div><div><h3>ClearSky 双语翻译 <span>v1.0.2</span></h3><ul>
+                <li>精简商店说明，提交 Chrome 应用商店审核</li>
+            </ul></div></div>
             <div class="row"><div class="date">2026.10.01</div><div><h3>ClearSky 双语翻译 <span>v1.0.1</span></h3><ul>
                 <li>权限改为按需申请：不再读取所有网站，只在你操作时访问当前页</li>
                 <li>「总是翻译此网站」改为针对单个网站授权，关闭即归还</li>

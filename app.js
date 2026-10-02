@@ -205,7 +205,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "Chrome 插件 \xB7 v1.0.1 \xB7 商店审核中"))), /*#__PURE__*/React.createElement("div", {
+}, "Chrome 插件 \xB7 v1.0.3 \xB7 商店审核中"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "外文网页、外文视频，一个插件读懂。"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -329,6 +329,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.10.02"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译 ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.0.3")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "新增微软免费翻译，与谷歌互为备份，国内通常无需代理"), /*#__PURE__*/React.createElement("li", null, "支持 YouTube 直播双语字幕"), /*#__PURE__*/React.createElement("li", null, "原文、译文字号分开调节，全屏字幕不再变大")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
