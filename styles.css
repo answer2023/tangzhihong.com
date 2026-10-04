@@ -507,6 +507,81 @@ button { font-family: inherit; cursor: pointer; border: none; background: none }
     transition: gap .2s;
 }
 .product-tile:hover .product-tile-cta { gap: 8px }
+.product-tile-actions {
+    margin-top: auto;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px 22px;
+}
+.product-tile-actions .product-tile-cta { margin-top: 0 }
+.product-tile-film {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--accent);
+    font-size: 15px; font-weight: 500;
+    cursor: pointer; border-radius: 6px;
+}
+.product-tile-film:hover { text-decoration: underline }
+.product-tile-film:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px }
+.section-dark .product-tile-film { color: var(--link-dark) }
+
+/* 影片展示区 */
+.section-films { background: var(--bg-light) }
+.films-grid {
+    margin-top: 56px;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 300px));
+    justify-content: center; gap: 28px 56px;
+}
+.film-card { cursor: pointer; text-align: center; border-radius: 34px }
+.film-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px }
+.film-card-frame {
+    position: relative; aspect-ratio: 9 / 16;
+    border-radius: 30px; overflow: hidden; background: #000;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .22);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.film-card:hover .film-card-frame { transform: translateY(-6px); box-shadow: 0 40px 90px rgba(0, 0, 0, .28) }
+.film-card-frame video { width: 100%; height: 100%; object-fit: cover; display: block }
+.film-card-play {
+    position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+    padding: 9px 18px 9px 14px; border-radius: 999px;
+    background: rgba(0, 0, 0, .55); color: #fff;
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    font-size: 14px; font-weight: 500;
+}
+.film-card h3 { margin-top: 22px; font-family: var(--font-display); font-size: 21px; font-weight: 600 }
+.film-card p { margin-top: 4px; font-size: 15px; color: var(--text-secondary) }
+@media (max-width: 640px) {
+    .films-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; margin-top: 36px }
+    .film-card-frame { border-radius: 20px }
+    .film-card-play { bottom: 10px; padding: 6px 12px 6px 9px; font-size: 12px }
+    .film-card h3 { margin-top: 14px; font-size: 16px }
+    .film-card p { font-size: 12.5px }
+}
+@media (prefers-reduced-motion: reduce) { .film-card-frame { transition: none } }
+
+/* 影片播放层 */
+.film-overlay {
+    position: fixed; inset: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, .86);
+    -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+    animation: film-in .25s ease-out;
+}
+.film-video {
+    max-height: calc(100vh - 48px); max-width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 18px; background: #000;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, .6);
+}
+.film-close {
+    position: absolute; top: 20px; right: 20px;
+    width: 36px; height: 36px; border: 0; border-radius: 50%;
+    background: rgba(255, 255, 255, .16); color: #fff;
+    font-size: 22px; line-height: 36px; padding: 0; cursor: pointer;
+}
+.film-close:hover { background: rgba(255, 255, 255, .28) }
+@keyframes film-in { from { opacity: 0 } to { opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .film-overlay { animation: none } }
 .section-dark .product-tile-cta { color: var(--link-dark) }
 .theme-mono .section-dark .product-tile-cta { color: #fff }
 

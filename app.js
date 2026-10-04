@@ -178,6 +178,177 @@ const Hero = ({
   className: "hero-stat-dot"
 }), "3 \u6B3E\u4EA7\u54C1\u5728\u7EBF \xB7 \u6301\u7EED\u66F4\u65B0"))), showMockups && /*#__PURE__*/React.createElement(HeroMockups, null))));
 
+/* ===== Films(作品卡片上的「观看影片」+ 弹出播放层) ===== */
+const FILMS = {
+  translate: {
+    title: "ClearSky 双语翻译",
+    tagline: "外文网页、外文视频，一个插件读懂。",
+    src: "assets/films/translate.mp4",
+    poster: "assets/films/translate-poster.jpg"
+  },
+  jotbee: {
+    title: "JotBee",
+    tagline: "随手记录，酿造生活。",
+    src: "assets/films/jotbee.mp4",
+    poster: "assets/films/jotbee-poster.jpg"
+  }
+};
+const FilmLink = ({
+  film
+}) => {
+  // 卡片整体是 <a>,这里拦住点击,不跳转
+  const open = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.dispatchEvent(new CustomEvent("open-film", {
+      detail: film
+    }));
+  };
+  return /*#__PURE__*/React.createElement("span", {
+    className: "product-tile-film",
+    role: "button",
+    tabIndex: 0,
+    onClick: open,
+    onKeyDown: e => {
+      if (e.key === "Enter" || e.key === " ") open(e);
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 24 24",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: 12,
+    cy: 12,
+    r: 10.5,
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.5
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 8.2v7.6l6-3.8z",
+    fill: "currentColor"
+  })), "观看影片");
+};
+const FilmModal = () => {
+  const [film, setFilm] = useState(null);
+  useEffect(() => {
+    const open = e => setFilm(e.detail);
+    const key = e => {
+      if (e.key === "Escape") setFilm(null);
+    };
+    window.addEventListener("open-film", open);
+    window.addEventListener("keydown", key);
+    return () => {
+      window.removeEventListener("open-film", open);
+      window.removeEventListener("keydown", key);
+    };
+  }, []);
+  useEffect(() => {
+    document.documentElement.style.overflow = film ? "hidden" : "";
+  }, [film]);
+  if (!film || !FILMS[film]) return null;
+  const f = FILMS[film];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "film-overlay",
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-label": f.title + " 影片",
+    onClick: () => setFilm(null)
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "film-close",
+    "aria-label": "关闭影片",
+    onClick: () => setFilm(null)
+  }, "\xD7"), /*#__PURE__*/React.createElement("video", {
+    className: "film-video",
+    src: f.src,
+    poster: f.poster,
+    controls: true,
+    autoPlay: true,
+    playsInline: true,
+    onClick: e => e.stopPropagation()
+  }));
+};
+
+const PlayGlyph = ({
+  size = 18
+}) => /*#__PURE__*/React.createElement("svg", {
+  width: size,
+  height: size,
+  viewBox: "0 0 24 24",
+  "aria-hidden": "true"
+}, /*#__PURE__*/React.createElement("path", {
+  d: "M8 5.5v13l11-6.5z",
+  fill: "currentColor"
+}));
+const FilmCard = ({
+  film
+}) => {
+  const ref = useRef(null);
+  const f = FILMS[film];
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    v.muted = true; // React 不会可靠地写出 muted 属性,自动播放前手动设置
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) v.play().catch(() => {});else v.pause();
+      });
+    }, {
+      threshold: 0.35
+    });
+    obs.observe(v);
+    return () => obs.disconnect();
+  }, []);
+  const open = () => window.dispatchEvent(new CustomEvent("open-film", {
+    detail: film
+  }));
+  return /*#__PURE__*/React.createElement("div", {
+    className: "film-card fade-in",
+    role: "button",
+    tabIndex: 0,
+    "aria-label": "播放 " + f.title + " 影片（有声）",
+    onClick: open,
+    onKeyDown: e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open();
+      }
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "film-card-frame"
+  }, /*#__PURE__*/React.createElement("video", {
+    ref: ref,
+    src: f.src,
+    poster: f.poster,
+    muted: true,
+    loop: true,
+    playsInline: true,
+    preload: "metadata"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "film-card-play"
+  }, /*#__PURE__*/React.createElement(PlayGlyph, {
+    size: 16
+  }), "有声播放")), /*#__PURE__*/React.createElement("h3", null, f.title), /*#__PURE__*/React.createElement("p", null, f.tagline));
+};
+const Films = () => /*#__PURE__*/React.createElement("section", {
+  id: "films",
+  className: "section section-films"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "section-inner center"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "eyebrow"
+}, "影片"), /*#__PURE__*/React.createElement("h2", {
+  className: "headline-section"
+}, "30 秒，看个大概。"), /*#__PURE__*/React.createElement("p", {
+  className: "subtitle"
+}, "先看再读。点开有声音。"), /*#__PURE__*/React.createElement("div", {
+  className: "films-grid"
+}, /*#__PURE__*/React.createElement(FilmCard, {
+  film: "translate"
+}), /*#__PURE__*/React.createElement(FilmCard, {
+  film: "jotbee"
+}))));
+
 /* ===== Products ===== */
 const Products = () => /*#__PURE__*/React.createElement("section", {
   id: "products",
@@ -211,11 +382,15 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-desc"
 }, "网页双语对照或整页只看译文，一键切换；YouTube 字幕自动变成中英双语。可接 DeepSeek、通义千问等大模型，也能零配置免费用。"), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-features"
-}, /*#__PURE__*/React.createElement("span", null, "双语对照"), /*#__PURE__*/React.createElement("span", null, "仅显示译文"), /*#__PURE__*/React.createElement("span", null, "视频双语字幕"), /*#__PURE__*/React.createElement("span", null, "大模型翻译")), /*#__PURE__*/React.createElement("span", {
+}, /*#__PURE__*/React.createElement("span", null, "双语对照"), /*#__PURE__*/React.createElement("span", null, "仅显示译文"), /*#__PURE__*/React.createElement("span", null, "视频双语字幕"), /*#__PURE__*/React.createElement("span", null, "大模型翻译")), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-actions"
+}, /*#__PURE__*/React.createElement("span", {
   className: "product-tile-cta"
 }, "了解更多 ", /*#__PURE__*/React.createElement(Icon, {
   name: "arrow-right",
   size: 14
+})), /*#__PURE__*/React.createElement(FilmLink, {
+  film: "translate"
 }))), /*#__PURE__*/React.createElement("a", {
   href: "https://md.tangzhihong.com/",
   className: "product-tile"
@@ -283,11 +458,15 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-desc"
 }, "\u5373\u5F00\u5373\u5199\u7684\u65E5\u8BB0\u672C\u3002\u539F\u751F SwiftUI\uFF0C\u79D2\u5F00\u79D2\u5199\u3002iCloud \u7167\u7247\u540C\u6B65\uFF0CAI Reflect \u6E29\u6696\u56DE\u5E94\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-features"
-}, /*#__PURE__*/React.createElement("span", null, "iOS + macOS"), /*#__PURE__*/React.createElement("span", null, "iCloud \u540C\u6B65"), /*#__PURE__*/React.createElement("span", null, "7 \u79CD AI \u5F15\u64CE"), /*#__PURE__*/React.createElement("span", null, "\u65E0\u5185\u8D2D")), /*#__PURE__*/React.createElement("span", {
+}, /*#__PURE__*/React.createElement("span", null, "iOS + macOS"), /*#__PURE__*/React.createElement("span", null, "iCloud \u540C\u6B65"), /*#__PURE__*/React.createElement("span", null, "7 \u79CD AI \u5F15\u64CE"), /*#__PURE__*/React.createElement("span", null, "\u65E0\u5185\u8D2D")), /*#__PURE__*/React.createElement("div", {
+  className: "product-tile-actions"
+}, /*#__PURE__*/React.createElement("span", {
   className: "product-tile-cta"
 }, "\u4E86\u89E3\u66F4\u591A ", /*#__PURE__*/React.createElement(Icon, {
   name: "arrow-right",
   size: 14
+})), /*#__PURE__*/React.createElement(FilmLink, {
+  film: "jotbee"
 }))), /*#__PURE__*/React.createElement("a", {
   href: "https://fund.jotbee.app",
   className: "product-tile"
@@ -688,11 +867,11 @@ const App = () => {
   useEffect(() => {
     document.body.className = THEME_CLASS[tweaks.theme] || "";
   }, [tweaks.theme]);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement(FilmModal, null), /*#__PURE__*/React.createElement("main", {
     id: "main"
   }, /*#__PURE__*/React.createElement(Hero, {
     showMockups: tweaks.showMockups
-  }), /*#__PURE__*/React.createElement(Products, null), /*#__PURE__*/React.createElement(Updates, null), /*#__PURE__*/React.createElement(About, null), tweaks.showPrinciples && /*#__PURE__*/React.createElement(Principles, null), /*#__PURE__*/React.createElement(Blog, null), /*#__PURE__*/React.createElement(Notes, null), /*#__PURE__*/React.createElement(CTA, null)), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(Tweaks, {
+  }), /*#__PURE__*/React.createElement(Films, null), /*#__PURE__*/React.createElement(Products, null), /*#__PURE__*/React.createElement(Updates, null), /*#__PURE__*/React.createElement(About, null), tweaks.showPrinciples && /*#__PURE__*/React.createElement(Principles, null), /*#__PURE__*/React.createElement(Blog, null), /*#__PURE__*/React.createElement(Notes, null), /*#__PURE__*/React.createElement(CTA, null)), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(Tweaks, {
     tweaks: tweaks,
     setTweak: setTweak
   }));
