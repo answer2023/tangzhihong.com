@@ -176,7 +176,7 @@ const Hero = ({
   className: "hero-stat"
 }, /*#__PURE__*/React.createElement("span", {
   className: "hero-stat-dot"
-}), "3 \u6B3E\u4EA7\u54C1\u5728\u7EBF \xB7 \u6301\u7EED\u66F4\u65B0"))), showMockups && /*#__PURE__*/React.createElement(HeroMockups, null))));
+}), "5 \u6B3E\u4EA7\u54C1\u5728\u7EBF \xB7 \u6301\u7EED\u66F4\u65B0"))), showMockups && /*#__PURE__*/React.createElement(HeroMockups, null))));
 
 /* ===== Films(作品卡片上的「观看影片」+ 弹出播放层) ===== */
 const FILMS = {
@@ -376,7 +376,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "Chrome 插件 \xB7 v1.0.3 \xB7 商店审核中"))), /*#__PURE__*/React.createElement("div", {
+}, "Chrome 插件 \xB7 已上架"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "外文网页、外文视频，一个插件读懂。"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -458,7 +458,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-desc"
 }, "\u5373\u5F00\u5373\u5199\u7684\u65E5\u8BB0\u672C\u3002\u539F\u751F SwiftUI\uFF0C\u79D2\u5F00\u79D2\u5199\u3002iCloud \u7167\u7247\u540C\u6B65\uFF0CAI Reflect \u6E29\u6696\u56DE\u5E94\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-features"
-}, /*#__PURE__*/React.createElement("span", null, "iOS + macOS"), /*#__PURE__*/React.createElement("span", null, "iCloud \u540C\u6B65"), /*#__PURE__*/React.createElement("span", null, "7 \u79CD AI \u5F15\u64CE"), /*#__PURE__*/React.createElement("span", null, "\u65E0\u5185\u8D2D")), /*#__PURE__*/React.createElement("div", {
+}, /*#__PURE__*/React.createElement("span", null, "iOS + macOS"), /*#__PURE__*/React.createElement("span", null, "iCloud \u540C\u6B65"), /*#__PURE__*/React.createElement("span", null, "5 \u79CD AI \u5F15\u64CE"), /*#__PURE__*/React.createElement("span", null, "\u65E0\u5185\u8D2D")), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-actions"
 }, /*#__PURE__*/React.createElement("span", {
   className: "product-tile-cta"
