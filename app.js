@@ -253,7 +253,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "macOS \xB7 v1.3.1"))), /*#__PURE__*/React.createElement("div", {
+}, "macOS \xB7 v1.3.3"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u6309\u4F4F\u8BF4\u8BDD\uFF0C\u677E\u5F00\u8F93\u5165\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -329,6 +329,26 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.10.05"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "VoiceBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.3.3")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "\u53E3\u8FF0\u7FFB\u8BD1\u5931\u8D25\u65F6\uFF0C\u60AC\u6D6E\u7A97\u4F1A\u76F4\u63A5\u63D0\u793A\u539F\u56E0\uFF0C\u4E0D\u518D\u6084\u6084\u8F93\u51FA\u539F\u6587"), /*#__PURE__*/React.createElement("li", null, "WhisperKit \u5F15\u64CE\uFF1A\u4FEE\u590D\u53E5\u5C3E\u4E22\u5B57\u3001\u77ED\u53E5\u8BC6\u522B\u4E0D\u51FA\u7684\u95EE\u9898\uFF0C\u51FA\u5B57\u660E\u663E\u52A0\u5FEB"), /*#__PURE__*/React.createElement("li", null, "WhisperKit \u73B0\u6807\u6CE8\u4E3A\u5B9E\u9A8C\u6027\u5F15\u64CE\uFF0C\u65E5\u5E38\u4F7F\u7528\u5EFA\u8BAE\u9009\u5185\u7F6E\u5F15\u64CE")))), /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.10.04"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "VoiceBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.3.2")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "\u4FEE\u590D\u8BF4\u5B8C\u8BDD\u540E\u6700\u540E\u4E00\u4E24\u4E2A\u5B57\u5076\u5C14\u6CA1\u6709\u4E0A\u5C4F\u7684\u95EE\u9898")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
