@@ -511,6 +511,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
+}, "2026.10.06"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译 ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.0.4")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "修复论文摘要等正文里夹着引用标记时，整段不翻译的问题")))), /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
 }, "2026.10.05"), /*#__PURE__*/React.createElement("div", {
   className: "update-content"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee ", /*#__PURE__*/React.createElement("span", {
