@@ -511,6 +511,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
+}, "2026.10.11"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译 ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.0.5")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "视频字幕的原文颜色也可以自定义，白色原文被画面挡住时可以换一种颜色"), /*#__PURE__*/React.createElement("li", null, "优化视频双语字幕的性能，减少播放时的后台运算")))), /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
 }, "2026.10.06"), /*#__PURE__*/React.createElement("div", {
   className: "update-content"
 }, /*#__PURE__*/React.createElement("h3", null, "ClearSky 双语翻译 ", /*#__PURE__*/React.createElement("span", {
