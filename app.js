@@ -452,7 +452,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "JotBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "iOS \xB7 macOS \xB7 v1.2.3"))), /*#__PURE__*/React.createElement("div", {
+}, "iOS \xB7 macOS \xB7 v1.3.0"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u968F\u624B\u8BB0\u5F55\uFF0C\u917F\u9020\u751F\u6D3B\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -508,6 +508,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.10.19"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "JotBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.3.0")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "全文搜索：正文和标签都能搜"), /*#__PURE__*/React.createElement("li", null, "标签筛选：点一下只看某个标签，可以多选组合"), /*#__PURE__*/React.createElement("li", null, "带图日记更流畅：照片后台处理，不卡顿"), /*#__PURE__*/React.createElement("li", null, "Mac 版焕新设计：搜索收进标题栏放大镜（⌘F），字号回到系统默认，字号和配色统一放进设置")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
