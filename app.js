@@ -428,7 +428,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "VoiceBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "macOS \xB7 v1.3.3"))), /*#__PURE__*/React.createElement("div", {
+}, "macOS \xB7 \u656C\u8BF7\u671F\u5F85"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u6309\u4F4F\u8BF4\u8BDD\uFF0C\u677E\u5F00\u8F93\u5165\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -797,10 +797,7 @@ const CTA = () => /*#__PURE__*/React.createElement("section", {
 }, /*#__PURE__*/React.createElement("a", {
   href: "https://voicebee.tangzhihong.com/",
   className: "btn btn-primary"
-}, /*#__PURE__*/React.createElement(Icon, {
-  name: "download",
-  size: 14
-}), "VoiceBee for macOS"), /*#__PURE__*/React.createElement("a", {
+}, "VoiceBee \xB7 \u656C\u8BF7\u671F\u5F85"), /*#__PURE__*/React.createElement("a", {
   href: "https://jotbee.app",
   className: "btn btn-ghost"
 }, /*#__PURE__*/React.createElement(Icon, {
