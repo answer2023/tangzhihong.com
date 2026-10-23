@@ -792,7 +792,7 @@ const CTA = () => /*#__PURE__*/React.createElement("section", {
   style: {
     margin: "16px auto 0"
   }
-}, "\u6240\u6709\u5DE5\u5177\u5B8C\u5168\u514D\u8D39\u3002\u6CA1\u6709\u5185\u8D2D\uFF0C\u6CA1\u6709\u5E7F\u544A\uFF0C\u6CA1\u6709\u8D26\u53F7\u3002"), /*#__PURE__*/React.createElement("div", {
+}, "\u5927\u591A\u6570\u5DE5\u5177\u514D\u8D39\u4F7F\u7528\u3002\u6CA1\u6709\u5E7F\u544A\uFF0C\u4E0D\u6253\u6270\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "cta-buttons"
 }, /*#__PURE__*/React.createElement("a", {
   href: "https://voicebee.tangzhihong.com/",
