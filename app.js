@@ -452,7 +452,7 @@ const Products = () => /*#__PURE__*/React.createElement("section", {
   className: "product-tile-meta"
 }, /*#__PURE__*/React.createElement("h3", null, "JotBee"), /*#__PURE__*/React.createElement("span", {
   className: "product-tile-platform"
-}, "iOS \xB7 macOS \xB7 v1.3.0"))), /*#__PURE__*/React.createElement("div", {
+}, "iOS \xB7 macOS \xB7 v1.4.0"))), /*#__PURE__*/React.createElement("div", {
   className: "product-tile-tagline"
 }, "\u968F\u624B\u8BB0\u5F55\uFF0C\u917F\u9020\u751F\u6D3B\u3002"), /*#__PURE__*/React.createElement("p", {
   className: "product-tile-desc"
@@ -508,6 +508,16 @@ const Updates = () => /*#__PURE__*/React.createElement("section", {
 }, "\u6BCF\u4E00\u6B21\u66F4\u65B0\u90FD\u6765\u81EA\u771F\u5B9E\u4F7F\u7528\u4E2D\u7684\u75D2\u70B9\u3002"), /*#__PURE__*/React.createElement("div", {
   className: "updates-timeline"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "update-row"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "update-date"
+}, "2026.10.26"), /*#__PURE__*/React.createElement("div", {
+  className: "update-content"
+}, /*#__PURE__*/React.createElement("h3", null, "JotBee ", /*#__PURE__*/React.createElement("span", {
+  className: "update-version"
+}, "v1.4.0")), /*#__PURE__*/React.createElement("ul", {
+  className: "update-list"
+}, /*#__PURE__*/React.createElement("li", null, "录音：日记里可以录一段或几段语音，iPhone 和 Mac 都能录、能听，随 iCloud 同步"), /*#__PURE__*/React.createElement("li", null, "记录地址：在设置里打开「记录地址」，新日记会记下所在的街道和城市"), /*#__PURE__*/React.createElement("li", null, "移动日记：日记可以移到其他笔记本，Mac 上直接把卡片拖到侧栏"), /*#__PURE__*/React.createElement("li", null, "看照片：点照片直接看大图，可以放大、左右翻页、保存到相册")))), /*#__PURE__*/React.createElement("div", {
   className: "update-row"
 }, /*#__PURE__*/React.createElement("div", {
   className: "update-date"
