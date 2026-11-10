@@ -838,9 +838,7 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   className: "footer-col"
 }, /*#__PURE__*/React.createElement("h4", null, "Resources"), /*#__PURE__*/React.createElement("a", {
   href: "blog/"
-}, "Blog"), /*#__PURE__*/React.createElement("a", {
-  href: "pricing/"
-}, "Pricing")), /*#__PURE__*/React.createElement("div", {
+}, "Blog")), /*#__PURE__*/React.createElement("div", {
   className: "footer-col"
 }, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("a", {
   href: "privacy.html"

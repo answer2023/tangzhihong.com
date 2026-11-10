@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 · ClearSky</title>
+    <meta name="description" content="tangzhihong.com 站点级隐私政策：静态产品介绍页，不收集个人信息。">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background: var(--bg-white) }
+
+        .post-hero {
+            max-width: 736px; margin: 0 auto;
+            padding: 96px 24px 56px;
+        }
+        .post-hero .headline-hero { font-size: clamp(40px, 6vw, 64px); line-height: 1.1 }
+        .post-meta {
+            margin-top: 32px; padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            font-family: var(--font-mono); font-size: 13px;
+            color: var(--text-tertiary);
+            display: flex; gap: 16px; flex-wrap: wrap;
+        }
+
+        .post-body {
+            max-width: 736px; margin: 0 auto;
+            padding: 0 24px 120px;
+            font-size: 18px; line-height: 1.8; letter-spacing: 0;
+            color: var(--text-secondary);
+        }
+        .post-body p { margin: 0 0 22px }
+        .post-body strong { color: var(--text-primary); font-weight: 600 }
+        .post-body a { color: var(--link-light) }
+        .post-body a:hover { text-decoration: underline }
+        .post-body h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.4vw, 36px);
+            font-weight: 600; line-height: 1.2; letter-spacing: -0.015em;
+            color: var(--text-primary);
+            margin: 64px 0 28px;
+        }
+        .post-body ul { margin: 0 0 28px; padding-left: 1.4em }
+        .post-body li { margin-bottom: 12px; padding-left: 4px }
+        .post-body li::marker { color: var(--text-tertiary) }
+
+        .post-foot {
+            background: var(--bg-light);
+            padding: 48px 24px;
+        }
+        .post-foot-inner {
+            max-width: 688px; margin: 0 auto;
+            display: flex; gap: 32px; flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+            .post-hero { padding-top: 64px; padding-bottom: 40px }
+            .post-body { font-size: 17px }
+            .post-body h2 { margin-top: 48px }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner">
+        <a href="index.html" class="nav-logo"><span class="nav-logo-mark"></span>ClearSky</a>
+        <div class="nav-links">
+            <a href="index.html#products">产品</a>
+            <a href="index.html#updates">更新</a>
+            <a href="index.html#about">关于</a>
+            <a href="blog/">Blog</a>
+        </div>
+    </div></nav>
+
+    <header class="post-hero">
+        <div class="eyebrow">Privacy</div>
+        <h1 class="headline-hero">隐私政策</h1>
+        <div class="post-meta">
+            <span>生效日期：2026-11-10</span>
+            <span>开发者：ClearSky</span>
+        </div>
+    </header>
+
+    <main class="post-body">
+        <p>本政策适用于 <strong>tangzhihong.com</strong>（含其 GitHub Pages 部署域名）上的静态网站内容。开发者署名为 <strong>ClearSky</strong>。如有疑问，请联系 <a href="mailto:hi@tangzhihong.com">hi@tangzhihong.com</a>。</p>
+
+        <h2>本站是什么</h2>
+        <p>本站是 ClearSky 独立工作室的<strong>静态产品介绍页</strong>：介绍产品、更新动态与博客文章。页面由静态 HTML / CSS / JavaScript 构成，通过 GitHub Pages 托管。</p>
+        <p>本站<strong>不提供账号注册、登录、支付或表单收集</strong>，也<strong>不运营自有后端来收集或存储你的个人信息</strong>。</p>
+
+        <h2>我们收集什么</h2>
+        <p>就本站本身而言：我们<strong>不主动收集</strong>姓名、邮箱、电话、位置、浏览历史等个人信息，也<strong>未嵌入</strong>广告、分析统计或用户追踪脚本（例如常见的第三方 analytics）。</p>
+        <p>你通过页脚「Email」或本页联系邮箱主动发来的邮件，仅用于回复你的问题；邮件由你使用的邮箱服务商按各自政策处理。</p>
+
+        <h2>第三方资源（页面加载时）</h2>
+        <p>为渲染页面，本站会从公开 CDN 加载必要的前端资源。浏览器向这些服务发起请求时，可能附带常规网络元数据（如 IP、User-Agent），处理方式适用对方政策：</p>
+        <ul>
+            <li><strong>unpkg.com</strong>：加载 React / ReactDOM 运行时脚本；</li>
+            <li><strong>fonts.googleapis.com</strong>：加载站点所用的 Noto Sans SC 字体样式。</li>
+        </ul>
+        <p>除此以外，本站不额外引入统计或追踪类第三方脚本。</p>
+
+        <h2>各产品的隐私政策</h2>
+        <p>具体 App / 插件如何处理你的数据，以各自产品的隐私政策为准（本站只做介绍与入口）：</p>
+        <ul>
+            <li><a href="https://jotbee.app/privacy.html" target="_blank" rel="noopener noreferrer">JotBee 隐私政策</a></li>
+            <li><a href="https://jotbee.app/voicebee-privacy.html" target="_blank" rel="noopener noreferrer">VoiceBee 隐私政策</a></li>
+            <li><a href="https://answer2023.github.io/clearsky-translate/privacy.html" target="_blank" rel="noopener noreferrer">ClearSky 双语翻译 隐私政策</a></li>
+        </ul>
+        <p>其它在本站展示、但尚未单独发布公开隐私页的产品，不适用本站政策之外的额外承诺；使用前请以该产品界面与文档说明为准。</p>
+
+        <h2>儿童隐私</h2>
+        <p>本站为产品介绍站，不面向 14 岁以下儿童收集个人信息，也不向儿童定向投放广告。</p>
+
+        <h2>政策变更</h2>
+        <p>若本政策更新，将在本页面公布并修订生效日期。</p>
+
+        <h2>联系</h2>
+        <p>隐私相关问题：<a href="mailto:hi@tangzhihong.com">hi@tangzhihong.com</a></p>
+    </main>
+
+    <footer class="post-foot"><div class="post-foot-inner">
+        <a href="index.html" class="link-arrow">← 回到主页</a>
+        <a href="blog/" class="link-arrow">Blog →</a>
+    </div></footer>
+</body>
+</html>
